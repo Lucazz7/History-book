@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { ButtonDefault } from "../../Buttons/ButtonDefault/button";
-import { CheckBox } from "../CheckBox";
+import { CheckBox, CheckBoxLabel, CheckBoxWrapper } from "../CheckBox";
 
 export const checkBox = () => {
   return (
-    <>
-      <CheckBox />
-    </>
+    <div>
+      <CheckBoxWrapper>
+        <CheckBox id="checkbox" type="checkbox" />
+        <CheckBoxLabel htmlFor="checkbox" />
+      </CheckBoxWrapper>
+    </div>
   );
 };

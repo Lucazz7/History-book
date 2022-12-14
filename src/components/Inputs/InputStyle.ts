@@ -13,15 +13,19 @@ export const Input = styled.input`
 `;
 
 export const FileInput = styled.input`
-  width: 100%;
+  width: 0px;
 `;
 
 export const FileLabel = styled.label`
-  color: #555;
-  padding: 0;
-  line-height: 40px;
-  width: 300px;
-  margin: auto;
-  display: block;
-  border: 2px solid #555;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 12px;
+  background-color: #ff7f2f;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
 `;

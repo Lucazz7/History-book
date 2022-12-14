@@ -6,10 +6,9 @@ export const inputFile = () => {
   return (
     <div>
       <FileLabel>
+        <FileInput type="file" />
         <AiOutlineUpload />
-        <SpanStyle>
-          <FileInput type="file" />
-        </SpanStyle>
+        <SpanStyle>Envie seu Arquivo</SpanStyle>
       </FileLabel>
     </div>
   );
