@@ -17,15 +17,37 @@ export const FileInput = styled.input`
 `;
 
 export const FileLabel = styled.label`
-  cursor: pointer;
-  display: inline-flex;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  font-size: 14px;
-  padding: 10px 12px;
-  background-color: #ff7f2f;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  table-layout: fixed;
+  border: 1px dashed #a4a4a4;
+  border-radius: 3px;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 1.5rem;
+`;
+
+export const FileBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #a4a4a4;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 5rem;
+`;
+
+export const BoxFile = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #a4a4a4;
+  border-radius: 3px;
+  overflow: hidden;
 `;
