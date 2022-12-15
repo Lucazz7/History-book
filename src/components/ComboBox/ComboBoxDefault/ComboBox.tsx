@@ -1,12 +1,22 @@
-import { ComboBox } from "../ComboBox";
+import { ComboBox, ComboBoxOption } from "../ComboBox";
 
-export const ComboBoxDefault = () => {
+interface ComboBoxProps {
+  option: string[];
+}
+
+export const ComboBoxDefault: React.FC<ComboBoxProps> = ({
+  option,
+}: ComboBoxProps) => {
   return (
     <ComboBox>
-      <option value="Please Select">Please Select ...</option>
-      <option className="option" value="Iran">
-        Iran
-      </option>
+      <>
+        <ComboBoxOption>Please Select...</ComboBoxOption>
+
+        {option &&
+          option.map((item) => (
+            <ComboBoxOption key={item}>{item}</ComboBoxOption>
+          ))}
+      </>
     </ComboBox>
   );
 };
