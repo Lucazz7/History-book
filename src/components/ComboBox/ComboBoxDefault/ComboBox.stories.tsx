@@ -3,7 +3,7 @@ import App from "../../../App";
 import { ComboBoxDefault } from "./ComboBox";
 
 export default {
-  title: "Components/ComboBox",
+  title: "Components/ComboBoxS",
   component: ComboBoxDefault,
 } as Meta;
 
