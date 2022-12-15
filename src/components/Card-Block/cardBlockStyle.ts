@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { keyframes } from 'styled-components'
 
 export const HexagonAndCardGrid = styled.div`
@@ -391,3 +391,355 @@ export const InfoBlock = styled.div`
         text-align: center;
     }
 `
+
+
+
+const breatheAnimation = keyframes`
+  0% {
+      transform: translate3d(40px, -320px, 0) scaleX(1) scaleY(1) rotate(17deg);
+    }
+
+    80% {
+      transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(17deg);
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0) scaleX(1) scaleY(0) rotate(0deg);
+    }
+`
+
+export const Thing = styled.div`  
+        z-index: 0;
+      .rainBig1 {
+        position: absolute;
+        left: 100px;
+        bottom: 5px;
+        circle(8px);
+        background-color: rgba(231, 231, 231, 0.096);
+        border-radius: 50%;
+        animation: ${breatheAnimation} 2s linear infinite;
+        animation-fill-mode: both;
+        transform-origin: 50% 100%;
+    
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -2px;
+          left: 1px;
+          @include circle(6px);
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 3px;
+        }
+    
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -5px;
+          left: 2px;
+          width: 4px;
+          margin-top: 33px;
+          height: 10px;
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 50%;
+        }
+      }
+      .rainBig2{
+        position: absolute;
+        left: 30px;
+        bottom: 5px;
+        circle(8px);
+        background-color: rgba(231, 231, 231, 0.096);
+        border-radius: 50%;
+        animation: ${breatheAnimation} 1.2s linear infinite;
+        animation-fill-mode: both;
+        transform-origin: 50% 100%;
+    
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -2px;
+          left: 1px;
+          @include circle(6px);
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 3px;
+        }
+    
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -5px;
+          left: 2px;
+          width: 4px;
+          margin-top: 33px;
+          height: 10px;
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 50%;
+        }
+      }
+      .rainBig3{
+        position: absolute;
+        left: 50px;
+        bottom: 5px;
+        circle(8px);
+        background-color: rgba(231, 231, 231, 0.096);
+        border-radius: 50%;
+        animation: ${breatheAnimation} 1.3s linear infinite;
+        animation-fill-mode: both;
+        transform-origin: 50% 100%;
+    
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -2px;
+          left: 1px;
+          @include circle(6px);
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 3px;
+        }
+    
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -5px;
+          left: 2px;
+          width: 4px;
+          margin-top: 33px;
+
+          height: 10px;
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 50%;
+        }
+      }
+      .rainBig4{
+        position: absolute;
+        left: 20px;
+        bottom: 5px;
+        circle(8px);
+        background-color: rgba(231, 231, 231, 0.096);
+        border-radius: 50%;
+        animation: ${breatheAnimation} 1.7s linear infinite;
+        animation-fill-mode: both;
+        transform-origin: 50% 100%;
+    
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -2px;
+          left: 1px;
+          @include circle(6px);
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 3px;
+        }
+    
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -5px;
+          left: 2px;
+          width: 4px;
+          margin-top: 33px;
+
+          height: 10px;
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 50%;
+        }
+      }
+      .rainBig5{
+        position: absolute;
+        left: 80px;
+        bottom: 5px;
+        circle(8px);
+        background-color: rgba(231, 231, 231, 0.096);
+        border-radius: 50%;
+        animation: ${breatheAnimation} 1.1s linear infinite;
+        animation-fill-mode: both;
+        transform-origin: 50% 100%;
+    
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -2px;
+          left: 1px;
+          @include circle(6px);
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 3px;
+        }
+    
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -5px;
+          left: 2px;
+          width: 4px;
+          margin-top: 33px;
+
+          height: 10px;
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 50%;
+        }
+      }
+      .rainBig6{
+        position: absolute;
+        left: 150px;
+        bottom: 15px;
+        circle(8px);
+        background-color: rgba(231, 231, 231, 0.096);
+        border-radius: 50%;
+        animation: ${breatheAnimation} 1.2s linear infinite;
+        animation-fill-mode: both;
+        transform-origin: 50% 100%;
+    
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -2px;
+          left: 1px;
+          @include circle(6px);
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 3px;
+        }
+    
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: 5px;
+          left: 2px;
+          width: 4px;
+          margin-top: 33px;
+          height: 10px;
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 50%;
+        }
+      }
+
+      .rainBig7{
+        position: absolute;
+        left: 120px;
+        bottom: 15px;
+        z-index: 0;
+        circle(8px);
+        background-color: rgba(231, 231, 231, 0.096);
+        border-radius: 50%;
+        animation: ${breatheAnimation} 1.13s linear infinite;
+        animation-fill-mode: both;
+        transform-origin: 50% 100%;
+    
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -2px;
+          left: 1px;
+          @include circle(6px);
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 3px;
+        }
+    
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: 5px;
+          left: 2px;
+          width: 4px;
+          margin-top: 33px;
+          height: 10px;
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 50%;
+        }
+      }
+      .rainBig8{
+        position: absolute;
+        left: 127px;
+        bottom: 15px;
+        z-index: 0;
+        circle(8px);
+        background-color: rgba(231, 231, 231, 0.096);
+        border-radius: 50%;
+        animation: ${breatheAnimation} 1s linear infinite;
+        animation-fill-mode: both;
+        transform-origin: 50% 100%;
+    
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -2px;
+          left: 1px;
+          @include circle(6px);
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 3px;
+        }
+    
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: 5px;
+          left: 2px;
+          width: 4px;
+          margin-top: 33px;
+          height: 10px;
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 50%;
+        }
+      }
+
+      .rainMed2 {
+        @extend .rainBig1;
+        left: 100px;
+        bottom: 5px;
+        opacity: 0.6;
+        @include circle(6px);
+        animation: ${breatheAnimation} 1s linear infinite;
+        animation-fill-mode: both;
+    
+        &:before {
+          top: -2px;
+          left: 1px;
+          @include circle(4px);
+        }
+    
+        &:after {
+          top: -4px;
+          left: 2px;
+          width: 2px;
+          height: 6px;
+        }
+      }
+      
+      .rainTiny2{
+        @extend .rainBig1;
+        left: 100px;
+        opacity: 0.3;
+        @include circle(4px);
+        animation: ${breatheAnimation} 1s linear infinite;
+        animation-fill-mode: both;
+    
+        &:before {
+          top: -2px;
+          left: 1px;
+          @include circle(2px);
+        }
+    
+        &:after {
+          top: -3px;
+          left: 1px;
+          width: 2px;
+          height: 4px;
+        }
+      }
+    }
+     `

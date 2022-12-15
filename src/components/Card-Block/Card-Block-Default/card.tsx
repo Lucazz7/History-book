@@ -2,7 +2,7 @@ import { BsCloudLightningRainFill, BsSunFill } from "react-icons/bs";
 import { BiWind } from "react-icons/bi";
 import { WiHumidity } from "react-icons/wi";
 import { FaTemperatureHigh } from "react-icons/fa";
-import { CardCol, CardsCols, ContainerBack, ContainerCardBlock, ContainerCardsWrapper, ContainerFront, Fog, Fog2, Fog3, Fog4, Fog5, Frame, HexagonAndCardGrid, InfoBlock } from "../cardBlockStyle";
+import { CardCol, CardsCols, ContainerBack, ContainerCardBlock, ContainerCardsWrapper, ContainerFront, Fog, Fog2, Fog3, Fog4, Fog5, Frame, HexagonAndCardGrid, InfoBlock, Thing } from "../cardBlockStyle";
 import { useMemo } from "react";
 
 export type Blocks = {
@@ -89,6 +89,33 @@ export const CardBlock: React.FC<CardsProps> = ({
                                             <InfoBlock className="infoBlock">
                                                 <p>{item.abrv}</p>
                                                 <span>{item.name}</span>
+
+                                                <Thing>
+                                                    <div className="rainBig1"></div>
+                                                    <div className="rainBig2"></div>
+                                                    <div className="rainBig3"></div>
+                                                    <div className="rainBig4"></div>
+                                                    <div className="rainBig5"></div>
+                                                    <div className="rainBig6"></div>
+                                                    <div className="rainBig7"></div>
+                                                    <div className="rainBig8"></div>
+                                                    <div className="rainBig9"></div>
+                                                    <div className="rainBig10"></div>
+
+
+                                                    <div className="rainMed2"></div>
+                                                    <div className="rain-med-3"></div>
+                                                    <div className="rain-med-4"></div>
+                                                    <div className="rain-med-5"></div>
+                                                    <div className="rain-med-6"></div>
+                                                    <div className="rain-med-7"></div>
+                                                    <div className="rain-med-8"></div>
+                                                    <div className="rain-med-9"></div>
+                                                    <div className="rain-med-10"></div>
+
+                                                    <div className="rainTiny2"></div>
+
+                                                </Thing >
                                             </InfoBlock>
                                         </Frame>
                                     </ContainerFront>
