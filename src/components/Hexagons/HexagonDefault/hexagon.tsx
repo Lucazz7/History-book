@@ -7,7 +7,6 @@ import {
   Text,
   Pattern,
 } from "react-hexgrid";
-import "./Hexa.scss";
 import { BsFillCloudLightningRainFill } from "react-icons/bs";
 import { AiOutlineEye } from "react-icons/ai";
 import { FaTemperatureHigh } from "react-icons/fa";
