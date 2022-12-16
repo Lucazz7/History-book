@@ -84,7 +84,7 @@ export const ContainerCardBlock = styled.div`
         transform-style: preserve-3d;
       }
 `
-export const ContainerFront = styled.div<{blockselect: boolean}>`
+export const ContainerFront = styled.div<{ blockselect: boolean }>`
     background-size: cover;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -101,8 +101,8 @@ export const ContainerFront = styled.div<{blockselect: boolean}>`
     min-height: 220px;
     height: auto;
     border-radius: 10px;
-    background: ${({blockselect }) => blockselect  ? '#F29357' : '#DCDCDC' } ;
-    border: 2px solid ${({blockselect }) => blockselect  ? '#FF6200' : '#C2C2C2' } ;
+    background: ${({ blockselect }) => blockselect ? '#F29357' : '#DCDCDC'} ;
+    border: 2px solid ${({ blockselect }) => blockselect ? '#FF6200' : '#C2C2C2'} ;
 
     font-size: 1.2rem;
     color: black;
@@ -409,15 +409,15 @@ const breatheAnimation = keyframes`
 `
 
 export const Thing = styled.div`  
-        z-index: 0;
+       z-index: 0;
       .rainBig1 {
         position: absolute;
-        left: 100px;
+        left: 25px;
         bottom: 5px;
         circle(8px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
-        animation: ${breatheAnimation} 2s linear infinite;
+        animation: ${breatheAnimation} 2.2s linear infinite;
         animation-fill-mode: both;
         transform-origin: 50% 100%;
     
@@ -439,7 +439,6 @@ export const Thing = styled.div`
           top: -5px;
           left: 2px;
           width: 4px;
-          margin-top: 33px;
           height: 10px;
           background: rgba(231, 231, 231, 0.096);
           border-radius: 50%;
@@ -447,78 +446,7 @@ export const Thing = styled.div`
       }
       .rainBig2{
         position: absolute;
-        left: 30px;
-        bottom: 5px;
-        circle(8px);
-        background-color: rgba(231, 231, 231, 0.096);
-        border-radius: 50%;
-        animation: ${breatheAnimation} 1.2s linear infinite;
-        animation-fill-mode: both;
-        transform-origin: 50% 100%;
-    
-        &:before {
-          position: absolute;
-          content: '';
-          display: block;
-          top: -2px;
-          left: 1px;
-          @include circle(6px);
-          background: rgba(231, 231, 231, 0.096);
-          border-radius: 3px;
-        }
-    
-        &:after {
-          position: absolute;
-          content: '';
-          display: block;
-          top: -5px;
-          left: 2px;
-          width: 4px;
-          margin-top: 33px;
-          height: 10px;
-          background: rgba(231, 231, 231, 0.096);
-          border-radius: 50%;
-        }
-      }
-      .rainBig3{
-        position: absolute;
-        left: 50px;
-        bottom: 5px;
-        circle(8px);
-        background-color: rgba(231, 231, 231, 0.096);
-        border-radius: 50%;
-        animation: ${breatheAnimation} 1.3s linear infinite;
-        animation-fill-mode: both;
-        transform-origin: 50% 100%;
-    
-        &:before {
-          position: absolute;
-          content: '';
-          display: block;
-          top: -2px;
-          left: 1px;
-          @include circle(6px);
-          background: rgba(231, 231, 231, 0.096);
-          border-radius: 3px;
-        }
-    
-        &:after {
-          position: absolute;
-          content: '';
-          display: block;
-          top: -5px;
-          left: 2px;
-          width: 4px;
-          margin-top: 33px;
-
-          height: 10px;
-          background: rgba(231, 231, 231, 0.096);
-          border-radius: 50%;
-        }
-      }
-      .rainBig4{
-        position: absolute;
-        left: 20px;
+        left: 35px;
         bottom: 5px;
         circle(8px);
         background-color: rgba(231, 231, 231, 0.096);
@@ -545,21 +473,19 @@ export const Thing = styled.div`
           top: -5px;
           left: 2px;
           width: 4px;
-          margin-top: 33px;
-
           height: 10px;
           background: rgba(231, 231, 231, 0.096);
           border-radius: 50%;
         }
       }
-      .rainBig5{
+      .rainBig3{
         position: absolute;
-        left: 80px;
+        left: 65px;
         bottom: 5px;
         circle(8px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
-        animation: ${breatheAnimation} 1.1s linear infinite;
+        animation: ${breatheAnimation} 1.4s linear infinite;
         animation-fill-mode: both;
         transform-origin: 50% 100%;
     
@@ -581,21 +507,19 @@ export const Thing = styled.div`
           top: -5px;
           left: 2px;
           width: 4px;
-          margin-top: 33px;
-
           height: 10px;
           background: rgba(231, 231, 231, 0.096);
           border-radius: 50%;
         }
       }
-      .rainBig6{
+      .rainBig4{
         position: absolute;
-        left: 150px;
-        bottom: 15px;
+        left: 20px;
+        bottom: 5px;
         circle(8px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
-        animation: ${breatheAnimation} 1.2s linear infinite;
+        animation: ${breatheAnimation} 1.3s linear infinite;
         animation-fill-mode: both;
         transform-origin: 50% 100%;
     
@@ -614,10 +538,77 @@ export const Thing = styled.div`
           position: absolute;
           content: '';
           display: block;
-          top: 5px;
+          top: -5px;
           left: 2px;
           width: 4px;
-          margin-top: 33px;
+          height: 10px;
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 50%;
+        }
+      }
+      .rainBig5{
+        position: absolute;
+        left: 80px;
+        bottom: 5px;
+        circle(8px);
+        background-color: rgba(231, 231, 231, 0.096);
+        border-radius: 50%;
+        animation: ${breatheAnimation} 1.9s linear infinite;
+        animation-fill-mode: both;
+        transform-origin: 50% 100%;
+    
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -2px;
+          left: 1px;
+          @include circle(6px);
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 3px;
+        }
+    
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -5px;
+          left: 2px;
+          width: 4px;
+          height: 10px;
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 50%;
+        }
+      }
+      .rainBig6{
+        position: absolute;
+        left: 120px;
+        bottom: 15px;
+        circle(8px);
+        background-color: rgba(231, 231, 231, 0.096);
+        border-radius: 50%;
+        animation: ${breatheAnimation} 1.3s linear infinite;
+        animation-fill-mode: both;
+        transform-origin: 50% 100%;
+    
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -2px;
+          left: 1px;
+          @include circle(6px);
+          background: rgba(231, 231, 231, 0.096);
+          border-radius: 3px;
+        }
+    
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: -5px;
+          left: 2px;
+          width: 4px;
           height: 10px;
           background: rgba(231, 231, 231, 0.096);
           border-radius: 50%;
@@ -626,13 +617,13 @@ export const Thing = styled.div`
 
       .rainBig7{
         position: absolute;
-        left: 120px;
+        left: 96px;
         bottom: 15px;
         z-index: 0;
         circle(8px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
-        animation: ${breatheAnimation} 1.13s linear infinite;
+        animation: ${breatheAnimation} 1.4s linear infinite;
         animation-fill-mode: both;
         transform-origin: 50% 100%;
     
@@ -640,21 +631,21 @@ export const Thing = styled.div`
           position: absolute;
           content: '';
           display: block;
-          top: -2px;
-          left: 1px;
-          @include circle(6px);
+          top: -5px;
+          left: 2px;
+          width: 4px;
+          height: 10px;
           background: rgba(231, 231, 231, 0.096);
-          border-radius: 3px;
+          border-radius: 50%;
         }
     
         &:after {
           position: absolute;
           content: '';
           display: block;
-          top: 5px;
+          top: -5px;
           left: 2px;
           width: 4px;
-          margin-top: 33px;
           height: 10px;
           background: rgba(231, 231, 231, 0.096);
           border-radius: 50%;
@@ -662,13 +653,13 @@ export const Thing = styled.div`
       }
       .rainBig8{
         position: absolute;
-        left: 127px;
+        left: 140px;
         bottom: 15px;
         z-index: 0;
         circle(8px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
-        animation: ${breatheAnimation} 1s linear infinite;
+        animation: ${breatheAnimation} 2s linear infinite;
         animation-fill-mode: both;
         transform-origin: 50% 100%;
     
@@ -687,10 +678,9 @@ export const Thing = styled.div`
           position: absolute;
           content: '';
           display: block;
-          top: 5px;
+          top: -5px;
           left: 2px;
           width: 4px;
-          margin-top: 33px;
           height: 10px;
           background: rgba(231, 231, 231, 0.096);
           border-radius: 50%;
@@ -720,6 +710,52 @@ export const Thing = styled.div`
         }
       }
       
+      .rainMed3 {
+        @extend .rainBig1;
+        left: 50px;
+        bottom: 5px;
+        opacity: 0.6;
+        @include circle(6px);
+        animation: ${breatheAnimation} 1s linear infinite;
+        animation-fill-mode: both;
+    
+        &:before {
+          top: -2px;
+          left: 1px;
+          @include circle(4px);
+        }
+    
+        &:after {
+          top: -4px;
+          left: 2px;
+          width: 2px;
+          height: 6px;
+        }
+      }
+
+      .rainMed4 {
+        @extend .rainBig1;
+        left: 70px;
+        bottom: 5px;
+        opacity: 0.6;
+        @include circle(6px);
+        animation: ${breatheAnimation} 1s linear infinite;
+        animation-fill-mode: both;
+    
+        &:before {
+          top: -2px;
+          left: 1px;
+          @include circle(4px);
+        }
+    
+        &:after {
+          top: -4px;
+          left: 2px;
+          width: 2px;
+          height: 6px;
+        }
+      }
+
       .rainTiny2{
         @extend .rainBig1;
         left: 100px;
@@ -733,7 +769,7 @@ export const Thing = styled.div`
           left: 1px;
           @include circle(2px);
         }
-    
+
         &:after {
           top: -3px;
           left: 1px;
@@ -741,5 +777,22 @@ export const Thing = styled.div`
           height: 4px;
         }
       }
-    }
+      .rainTiny3{
+        left: 50px;
+        opacity: 0.3;
+        animation: ${breatheAnimation} 1s linear infinite;
+        animation-fill-mode: both;
+    
+        &:before {
+          top: -2px;
+          left: 1px;
+        }
+
+        &:after {
+          top: -3px;
+          left: 1px;
+          width: 2px;
+          height: 4px;
+        }
+      }
      `

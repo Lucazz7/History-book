@@ -3,7 +3,8 @@ import { BiWind } from "react-icons/bi";
 import { WiHumidity } from "react-icons/wi";
 import { FaTemperatureHigh } from "react-icons/fa";
 import { CardCol, CardsCols, ContainerBack, ContainerCardBlock, ContainerCardsWrapper, ContainerFront, Fog, Fog2, Fog3, Fog4, Fog5, Frame, HexagonAndCardGrid, InfoBlock, Thing } from "../cardBlockStyle";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
+import './effectRain.scss';
 
 export type Blocks = {
     blockId: string;
@@ -26,6 +27,7 @@ interface CardsProps {
     blocks?: Blocks[];
     blockSelected?: string;
 }
+
 
 export const CardBlock: React.FC<CardsProps> = ({
     blocks,
@@ -104,18 +106,57 @@ export const CardBlock: React.FC<CardsProps> = ({
 
 
                                                     <div className="rainMed2"></div>
-                                                    <div className="rain-med-3"></div>
-                                                    <div className="rain-med-4"></div>
-                                                    <div className="rain-med-5"></div>
-                                                    <div className="rain-med-6"></div>
-                                                    <div className="rain-med-7"></div>
-                                                    <div className="rain-med-8"></div>
-                                                    <div className="rain-med-9"></div>
-                                                    <div className="rain-med-10"></div>
+                                                    <div className="rainMed3"></div>
+                                                    <div className="rainMed4"></div>
+                                                    <div className="rainMed5"></div>
+                                                    <div className="rainMed6"></div>
+                                                    <div className="rainMed7"></div>
+                                                    <div className="rainMed8"></div>
+                                                    <div className="rainMed9"></div>
+                                                    <div className="rainMed10"></div>
 
                                                     <div className="rainTiny2"></div>
+                                                    <div className="rainTiny3"></div>
+                                                    <div className="rainTiny4"></div>
+                                                    <div className="rainTiny5"></div>
+                                                    <div className="rainTiny6"></div>
+                                                    <div className="rainTiny7"></div>
+                                                    <div className="rainTiny8"></div>
+                                                    <div className="rainTiny9"></div>
+                                                    <div className="rainTiny10"></div>
 
                                                 </Thing >
+
+                                                {/* <div className="rain-big-1"></div>
+                                                <div className="rain-big-2"></div>
+                                                <div className="rain-big-3"></div>
+                                                <div className="rain-big-4"></div>
+                                                <div className="rain-big-5"></div>
+                                                <div className="rain-big-6"></div>
+                                                <div className="rain-big-7"></div>
+                                                <div className="rain-big-8"></div>
+                                                <div className="rain-big-9"></div>
+                                                <div className="rain-big-10"></div>
+
+                                                <div className="rain-med-2"></div>
+                                                <div className="rain-med-3"></div>
+                                                <div className="rain-med-4"></div>
+                                                <div className="rain-med-5"></div>
+                                                <div className="rain-med-6"></div>
+                                                <div className="rain-med-7"></div>
+                                                <div className="rain-med-8"></div>
+                                                <div className="rain-med-9"></div>
+                                                <div className="rain-med-10"></div>
+
+                                                <div className="rain-tiny-2"></div>
+                                                <div className="rain-tiny-3"></div>
+                                                <div className="rain-tiny-4"></div>
+                                                <div className="rain-tiny-5"></div>
+                                                <div className="rain-tiny-6"></div>
+                                                <div className="rain-tiny-7"></div>
+                                                <div className="rain-tiny-8"></div>
+                                                <div className="rain-tiny-9"></div>
+                                                <div className="rain-tiny-10"></div> */}
                                             </InfoBlock>
                                         </Frame>
                                     </ContainerFront>
@@ -161,3 +202,5 @@ export const CardBlock: React.FC<CardsProps> = ({
             </HexagonAndCardGrid></>
     );
 };
+
+
