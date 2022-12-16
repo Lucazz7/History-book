@@ -1,6 +1,5 @@
-import {themes} from '@storybook/theming'
-import '../src/global.scss'
 import { themes } from '@storybook/theming'
+import '../src/global.scss'
 
 
 export const parameters = {
