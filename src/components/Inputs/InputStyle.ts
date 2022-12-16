@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Input = styled.input`
-  width: 60%;
+  width: 100%;
   height: 45px;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: lighter;
   margin-bottom: 30px;
   background: #ecf0f1;
