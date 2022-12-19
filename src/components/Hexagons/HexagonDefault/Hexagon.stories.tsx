@@ -8,8 +8,8 @@ export default {
     blocks: [
       {
         blockId: "222S",
-        name: "Select",
-        abrv: "Slc",
+        name: "Exemple 1",
+        abrv: "Ex1",
         blockParent: "dsd",
         leafParent: false,
         date: "2012",
@@ -23,8 +23,8 @@ export default {
       },
       {
         blockId: "222ss",
-        name: "Default",
-        abrv: "Def",
+        name: "Exemple 2",
+        abrv: "Ex2",
         blockParent: "dsd",
         leafParent: false,
         date: "2012",
@@ -38,8 +38,8 @@ export default {
       },
       {
         blockId: "222s2s",
-        name: "Default",
-        abrv: "Def",
+        name: "Exemple 3",
+        abrv: "Ex3",
         blockParent: "dsd",
         leafParent: false,
         date: "2012",
@@ -53,8 +53,8 @@ export default {
       },
       {
         blockId: "222sFs",
-        name: "Default",
-        abrv: "Def",
+        name: "Exemple 4",
+        abrv: "Ex4",
         blockParent: "dsd",
         leafParent: false,
         date: "2012",
@@ -68,8 +68,8 @@ export default {
       },
       {
         blockId: "222sAs",
-        name: "Default",
-        abrv: "Def",
+        name: "Exemple 5",
+        abrv: "Ex5",
         blockParent: "dsd",
         leafParent: false,
         date: "2012",
@@ -83,8 +83,8 @@ export default {
       },
       {
         blockId: "22Fss",
-        name: "Default",
-        abrv: "Def",
+        name: "Exemple 6",
+        abrv: "Ex6",
         blockParent: "dsd",
         leafParent: false,
         date: "2012",
@@ -98,8 +98,8 @@ export default {
       },
       {
         blockId: "2sAs",
-        name: "Default",
-        abrv: "Def",
+        name: "Exemple 7",
+        abrv: "Ex7",
         blockParent: "dsd",
         leafParent: false,
         date: "2012",
