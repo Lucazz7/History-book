@@ -5,8 +5,11 @@ export default {
     title: "Components/Modal",
     component: OpenModal,
     args: {
-        title: 'Criar',
+        title: 'Exemple Modal',
         editOrCreated: 'create',
+        isHistory: true,
+        parametersListEdit: ['Exemple Combo1', 'Exemple Combo2'],
+        deleteParameter: 'Exemple delete'
     },
 } as Meta;
 

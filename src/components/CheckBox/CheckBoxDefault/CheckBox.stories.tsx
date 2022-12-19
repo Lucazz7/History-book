@@ -1,9 +1,9 @@
 import { Meta } from "@storybook/react";
-import { checkBox } from "./CheckBox";
+import { CheckBoxDefault } from "./CheckBox";
 
 export default {
   title: "Components/CheckBoxS",
-  component: checkBox,
+  component: CheckBoxDefault,
 } as Meta;
 
 export const CheckBoxes = {};

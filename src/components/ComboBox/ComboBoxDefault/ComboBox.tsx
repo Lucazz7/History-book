@@ -1,20 +1,21 @@
 import { ComboBox, ComboBoxOption } from "../ComboBox";
 
 interface ComboBoxProps {
-  option: string[];
+  option?: string[];
+  widthSize: number;
 }
 
 export const ComboBoxDefault: React.FC<ComboBoxProps> = ({
   option,
+  widthSize
 }: ComboBoxProps) => {
   return (
-    <ComboBox>
+    <ComboBox width={widthSize}>
       <>
-        <ComboBoxOption>Please Select...</ComboBoxOption>
-
+        <ComboBoxOption width={widthSize}>Please Select...</ComboBoxOption>
         {option &&
           option.map((item) => (
-            <ComboBoxOption key={item}>{item}</ComboBoxOption>
+            <ComboBoxOption width={widthSize} key={item}>{item}</ComboBoxOption>
           ))}
       </>
     </ComboBox>
