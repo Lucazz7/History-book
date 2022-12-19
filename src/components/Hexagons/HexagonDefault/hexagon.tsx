@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import {
   GridGenerator,
   HexGrid,
@@ -16,6 +16,7 @@ import Sum from "../../../images/iconsSvg/allIconsTemp/clear-day.svg";
 import Nublado from "../../../images/iconsSvg/allIconsTemp/chuvaNublado.svg";
 import { HexagonDivDad } from "../Hexagon";
 import Draggable from "react-draggable";
+import { Blocks } from "../../Card-Block/Card-Block-Default/card";
 
 export interface BlockPersonHexa {
   blockId: string;
@@ -37,138 +38,22 @@ export interface BlockPersonHexa {
   s: number;
   className?: string;
 }
-export const Hexag = () => {
-  const exempleBLock = useMemo(() => {
-    const test = [
-      {
-        blockId: "222",
-        name: "Select",
-        abrv: "Slc",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 12,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "222ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 12,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "222ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 0,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "222ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 12,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "222ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 12,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "22ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 12,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "2ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 12,
-          rain: 0,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "2ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 12,
-          rain: 0,
-          relativeHumidity: 13,
-        },
-      },
-    ];
-    return test;
-  }, []);
+
+interface hexagonProps {
+  blocks: Blocks[];
+}
+
+export const Hexagons: React.FC<hexagonProps> = ({
+  blocks
+}: hexagonProps) => {
+
+  const [enterBlock, setEnterBlock] = useState<string>('');
 
   const hexagonsInicial = GridGenerator.hexagon(1);
   const newBlock = useMemo(() => {
     //HEXAGONOS BLOCKPARENT 0
     const newBlocks: BlockPersonHexa[] = [];
-    exempleBLock.forEach((item, indexBlocks) => {
+    blocks.forEach((item, indexBlocks) => {
       hexagonsInicial.forEach((hexa, indexHex) => {
         if (indexHex === indexBlocks) {
           newBlocks.push({
@@ -178,14 +63,14 @@ export const Hexag = () => {
               item.data.rain > 1
                 ? "pat-1"
                 : item.data.solarIrradiation < 100.411004
-                ? "pat-2"
-                : "pat-3",
+                  ? "pat-2"
+                  : "pat-3",
           });
         }
       });
     });
     return newBlocks;
-  }, [exempleBLock, hexagonsInicial]);
+  }, [blocks, hexagonsInicial]);
 
   return (
     <Draggable>
@@ -204,9 +89,11 @@ export const Hexag = () => {
                   q={item.q}
                   r={item.r}
                   s={item.s}
-                  fill={item.icons}
+                  fill={enterBlock === item.blockId ? '' : item.icons}
+                  onMouseEnter={() => setEnterBlock(item.blockId)}
+                  onMouseLeave={() => (enterBlock.length > 0 ? setEnterBlock('') : setEnterBlock(item.blockId))}
                 >
-                  <Text style={{ fill: "black" }}>{item.abrv}</Text>
+                  {item.blockId !== enterBlock ? <Text style={{ fill: "black" }}>{item.abrv}</Text> : ''}
                   <BsFillCloudLightningRainFill
                     className="iconsInfo"
                     x={-4}
@@ -261,7 +148,7 @@ export const Hexag = () => {
                     />
                     <Text x={2} y={0} className="hexagonViewMoreIcon">
                       {" "}
-                      {exempleBLock.length - 7}
+                      {blocks.length - 7}
                     </Text>
                   </Hexagon>
                 </>
