@@ -9,7 +9,7 @@ export const inputFile = () => {
   return (
     <FileBox>
       <BoxFile>
-        <SpanStyle>Upload your file</SpanStyle>
+        <SpanStyle>Carregar Arquivo</SpanStyle>
         <br />
         <FileLabel>
           <FileInput type="file" />
@@ -17,6 +17,7 @@ export const inputFile = () => {
         </FileLabel>
         <br />
         <ButtonDefault
+        widthButton={70}
           buttonName="Enviar"
           setClick={() => setUpload(!upload)}
         />

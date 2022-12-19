@@ -17,6 +17,5 @@ export const Button = styled.button<{ width: number, height?: number}>`
   &:hover {
     background: #ecf0f1;
     color: black;
-    border: 1px solid #ff7f2f;
   }
 `;

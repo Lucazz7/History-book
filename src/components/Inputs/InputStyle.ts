@@ -23,23 +23,26 @@ export const FileLabel = styled.label`
   justify-content: center;
   align-items: center;
   table-layout: fixed;
-  border: 1px dashed #a4a4a4;
+  border: 2px dashed #a4a4a4;
   border-radius: 3px;
   text-align: center;
+  font-size: 3rem;
   overflow: hidden;
   cursor: pointer;
-  padding: 1.5rem;
+  padding: 3rem;
+  background-color: rgb(222, 222, 222, 0.5);;
 `;
 
 export const FileBox = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid #a4a4a4;
   border-radius: 3px;
   overflow: hidden;
-  padding: 5rem;
+  padding: 10rem;
 `;
 
 export const BoxFile = styled.div`
@@ -50,4 +53,5 @@ export const BoxFile = styled.div`
   border: 1px solid #a4a4a4;
   border-radius: 3px;
   overflow: hidden;
+  width: 30%;
 `;
