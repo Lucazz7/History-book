@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled.button<{ width: number, height?: number}>`
   color: #fff;
   cursor: pointer;
   background: #ff7f2f;
   font-size: 1.2rem;
-  height: 45px;
+  height: ${props => props.height}%;
+  width: ${props => props.width}%;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
@@ -17,6 +18,5 @@ export const Button = styled.button`
     background: #ecf0f1;
     color: black;
     border: 1px solid #ff7f2f;
-  
   }
 `;

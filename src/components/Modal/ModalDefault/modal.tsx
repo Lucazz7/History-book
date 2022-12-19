@@ -6,7 +6,7 @@ import { Button } from "../../Buttons/buttonStyle";
 
 
 interface ModalProps {
-    title?: string;
+    title: string;
     setModalOpen?: React.Dispatch<React.SetStateAction<'edit' | 'create' | 'close'>>;
     editOrCreated: string;
 }
@@ -27,15 +27,15 @@ export const OpenModal: React.FC<ModalProps> = ({
             className="modal show"
             style={{ display: 'block', position: 'initial' }}
         >
-            <Button style={{ fontSize: '1.8rem' }} onClick={handleShow}>
-                Launch demo modal
+            <Button width={40} style={{ fontSize: '1.8rem' }} onClick={handleShow}>
+                Abrir modal
             </Button>
 
             {show ?
                 <Modal.Dialog >
                     <Modal.Header style={{ backgroundColor: '#ff7f2f', color: 'white', border: '1px solid rgb(210,210,210, 0.2)', borderRadius: '4px 4px 0px 0px' }}>
                         <IoCloseOutline style={{ position: 'absolute', left: '92%', justifyContent: 'end', color: 'white', height: '40px', width: '50px', fontSize: '12px', top: '4px' }} onClick={handleClose} />
-                        <Modal.Title style={{ textAlign: 'center' }} ><h3>{title ? title : "Modal"}</h3></Modal.Title>
+                        <Modal.Title style={{ textAlign: 'center' }} ><h3>{title}</h3></Modal.Title>
                     </Modal.Header>
                     <Modal.Body>{editOrCreated !== 'delete' ?
                         <><div>
@@ -59,16 +59,16 @@ export const OpenModal: React.FC<ModalProps> = ({
                     </Modal.Body>
                     <Modal.Footer>
                         {editOrCreated === 'delete' ? (
-                            <Button style={{ width: '100%', fontSize: '1.8rem' }}>
+                            <Button width={100} style={{ width: '100%', fontSize: '1.8rem' }}>
                                 Deletar
                             </Button>
 
                         ) : editOrCreated === 'edit' ? (
-                            <Button style={{ width: '100%', fontSize: '1.8rem' }}>
+                            <Button width={100} style={{ width: '100%', fontSize: '1.8rem' }}>
                                 Salvar
                             </Button>
                         ) : (
-                            <Button style={{ width: '100%', fontSize: '1.8rem' }}>
+                            <Button width={100} style={{ width: '100%', fontSize: '1.8rem' }}>
                                 Criar
                             </Button>
                         )}
