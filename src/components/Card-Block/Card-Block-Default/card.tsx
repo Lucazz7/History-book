@@ -33,50 +33,11 @@ export const CardBlock: React.FC<CardsProps> = ({
     blocks,
     blockSelected,
 }: CardsProps) => {
-    const exempleBLock = useMemo(() => {
-        const test = [{
-            blockId: '222',
-            name: 'Select',
-            abrv: 'Slc',
-            blockParent: 'dsd',
-            leafParent: false,
-            date: '2012',
-            data: {
-                windSpeed: 2,
-                solarIrradiation: 22,
-                temperature: 22,
-                rain: 12,
-                relativeHumidity: 13,
-            }
-        }, {
-            blockId: '222ss',
-            name: 'Default',
-            abrv: 'Def',
-            blockParent: 'dsd',
-            leafParent: false,
-            date: '2012',
-            data: {
-                windSpeed: 2,
-                solarIrradiation: 22,
-                temperature: 22,
-                rain: 12,
-                relativeHumidity: 13,
-            }
-        }]
-        if (blocks === undefined) {
-            return test
-        }
-        else {
-            return blocks
-        }
-
-
-    }, [blocks])
     return (
         <>
             <HexagonAndCardGrid>
                 <ContainerCardsWrapper>
-                    {exempleBLock && exempleBLock.map((item) => (
+                    {blocks && blocks.map((item) => (
                         <CardsCols>
                             <CardCol>
                                 <ContainerCardBlock>

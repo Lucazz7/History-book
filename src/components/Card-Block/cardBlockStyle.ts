@@ -389,6 +389,12 @@ export const InfoBlock = styled.div`
         display: inline-block;
         justify-content: center;
         text-align: center;
+        a {
+          color: white;
+        }
+        a {
+          text-decoration: none;
+        }
     }
 `
 
