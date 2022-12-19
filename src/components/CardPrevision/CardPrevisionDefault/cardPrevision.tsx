@@ -19,6 +19,7 @@ interface PrevisionProps {
     setDataInfoBlock?: React.Dispatch<React.SetStateAction<string>>;
     setIndexPrevision?: React.Dispatch<React.SetStateAction<string>>;
     indexPrevision?: string;
+    selectCard: number;
 }
 
 export const Prevision: React.FC<PrevisionProps> = ({
@@ -32,10 +33,11 @@ export const Prevision: React.FC<PrevisionProps> = ({
     leafParent,
     setDataInfoBlock,
     setIndexPrevision,
+    selectCard,
     theme,
 }) => {
 
-    const [selectCardPrev, setSelectCardPrev] = useState<number>(2);
+    const [selectCardPrev, setSelectCardPrev] = useState<number>(selectCard);
 
     const selectTemp = useMemo(() => {
         const lasBlock = blocksArrayRedux?.filter(

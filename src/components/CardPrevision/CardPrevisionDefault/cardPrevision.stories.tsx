@@ -5,6 +5,7 @@ export default {
     title: "Components/CardPrevision",
     component: Prevision,
     args: {
+        selectCard: 1,
         blockId: '222',
         indexPrevision: 'future',
         foreCasts: [
