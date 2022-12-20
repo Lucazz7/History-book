@@ -17,7 +17,8 @@ export const inputFile = () => {
         </FileLabel>
         <br />
         <ButtonDefault
-        widthButton={70}
+          widthButton={50}
+          disableButton={false}
           buttonName="Enviar"
           setClick={() => setUpload(!upload)}
         />

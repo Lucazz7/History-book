@@ -7,7 +7,7 @@ export default {
   component: ButtonDefault,
   args: {
     buttonName: "Button",
-    widthButton: 30,
+    widthButton: 15,
   },
 } as Meta;
 

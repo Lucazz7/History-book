@@ -4,7 +4,8 @@ interface bottonProps {
   buttonName: string;
   click?: boolean;
   setClick: (click: any) => void;
-  widthButton: number;
+  widthButton: 15 | 50 | 100;
+  disableButton: boolean;
 }
 
 export const ButtonDefault: React.FC<bottonProps> = ({
@@ -12,10 +13,11 @@ export const ButtonDefault: React.FC<bottonProps> = ({
   click,
   setClick,
   widthButton,
+  disableButton
 }: bottonProps) => {
   return (
     <>
-      <Button width={widthButton} onClick={() => setClick(!click)}>{buttonName}</Button>
+      <Button disabled={disableButton} width={widthButton} active={disableButton} onClick={() => setClick(!click)}>{buttonName}</Button>
     </>
   );
 };

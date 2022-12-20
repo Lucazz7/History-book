@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const Button = styled.button<{ width: number, height?: number}>`
+export const Button = styled.button<{ width: number, height?: number, active: boolean }>`
   color: #fff;
   cursor: pointer;
-  background: #ff7f2f;
+  background: ${props => props.active ? '#ff7f2f' : 'grey'};
   font-size: 1.2rem;
   height: ${props => props.height}%;
   width: ${props => props.width}%;
@@ -15,7 +15,7 @@ export const Button = styled.button<{ width: number, height?: number}>`
   padding: 10px;
 
   &:hover {
-    background: #ecf0f1;
-    color: black;
+    background: ${props => props.active ? '#ecf0f1' : 'grey'}; 
+    color: ${props => props.active ? 'black' : ''}; ;
   }
 `;

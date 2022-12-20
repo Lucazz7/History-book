@@ -36,7 +36,7 @@ export const OpenModal: React.FC<ModalProps> = ({
             style={{ display: 'block', position: 'initial' }}
         >
             {isHistory !== undefined && isHistory ?
-                <Button width={40} style={{ fontSize: '1.8rem' }} onClick={() => setModalOpen(editOrCreated)}>
+                <Button active={true} width={15} style={{ fontSize: '1.8rem' }} onClick={() => setModalOpen(editOrCreated)}>
                     Abrir modal
                 </Button>
                 : ''}
@@ -81,16 +81,16 @@ export const OpenModal: React.FC<ModalProps> = ({
                     </Modal.Body>
                     <Modal.Footer>
                         {editOrCreated === 'delete' ? (
-                            <Button width={100} style={{ width: '100%', fontSize: '1.8rem' }}>
+                            <Button active={true} width={100} style={{ width: '100%', fontSize: '1.8rem' }}>
                                 Deletar
                             </Button>
 
                         ) : editOrCreated === 'edit' ? (
-                            <Button width={100} style={{ width: '100%', fontSize: '1.8rem' }}>
+                            <Button active={true} width={100} style={{ width: '100%', fontSize: '1.8rem' }}>
                                 Salvar
                             </Button>
                         ) : (
-                            <Button width={100} style={{ width: '100%', fontSize: '1.8rem' }}>
+                            <Button active={true} width={100} style={{ width: '100%', fontSize: '1.8rem' }}>
                                 Criar
                             </Button>
                         )}
