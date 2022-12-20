@@ -2,8 +2,8 @@ import { Meta } from "@storybook/react";
 import { inputFile } from "./InputFile";
 
 export default {
-  title: "Components/Inputs",
+  title: "Components/Inputs/UploadFile",
   component: inputFile,
 } as Meta;
 
-export const InputFile = {};
+export const InputFileUpload = {};

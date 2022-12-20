@@ -3,7 +3,7 @@ import App from "../../../App";
 import { input } from "./Input";
 
 export default {
-  title: "Components/Inputs",
+  title: "Components/Inputs/InputDefaults",
   component: input,
 } as Meta;
 
