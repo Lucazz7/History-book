@@ -2,7 +2,7 @@ import { Meta } from "@storybook/react";
 import { Hexagons } from "./hexagon";
 
 export default {
-  title: "Components/HexaVem",
+  title: "Components/Hexagon/HexagonDefaults",
   component: Hexagons,
   args: {
     blocks: [
@@ -130,4 +130,4 @@ export default {
   }
 } as Meta;
 
-export const HexaBox = {};
+export const HexagonDefault = {};

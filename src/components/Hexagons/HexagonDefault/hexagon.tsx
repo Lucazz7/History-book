@@ -14,7 +14,7 @@ import { BsFillSunFill } from "react-icons/bs";
 import IconRain from "../../../images/iconsSvg/rain.svg";
 import Sum from "../../../images/iconsSvg/allIconsTemp/clear-day.svg";
 import Nublado from "../../../images/iconsSvg/allIconsTemp/chuvaNublado.svg";
-import { HexagonDivDad } from "../Hexagon";
+import { HexagonDivDad } from "./Hexagon";
 import Draggable from "react-draggable";
 import { Blocks } from "../../Card-Block/Card-Block-Default/card";
 

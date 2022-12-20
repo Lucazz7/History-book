@@ -164,7 +164,7 @@ export const DateInfoCard = styled.p`
 `;
 
 export const RightCard = styled.div<{ active: boolean }>`
-    width: 220px;
+    width: 180px;
     display: column;
     align-items: center;
     justify-content: space-around;
