@@ -501,7 +501,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 25px;
         bottom: 5px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 2.2s linear infinite;
@@ -535,7 +535,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 35px;
         bottom: 5px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.7s linear infinite;
@@ -569,7 +569,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 65px;
         bottom: 5px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.4s linear infinite;
@@ -603,7 +603,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 20px;
         bottom: 5px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.3s linear infinite;
@@ -637,7 +637,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 80px;
         bottom: 5px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.9s linear infinite;
@@ -671,7 +671,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 120px;
         bottom: 15px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.3s linear infinite;
@@ -707,7 +707,7 @@ export const Thing = styled.div`
         left: 96px;
         bottom: 15px;
         z-index: 0;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.4s linear infinite;
@@ -743,7 +743,7 @@ export const Thing = styled.div`
         left: 140px;
         bottom: 15px;
         z-index: 0;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 2s linear infinite;
@@ -889,7 +889,7 @@ export const Sum = styled.div`
   position: absolute;
   height: 30px;
   width: 30px;
-  box-shadow 0 0 32px 12px #ddd;
+  box-shadow: 0 0 32px 12px #ddd;
   border-radius: 50%;
   top: 10px;
   left: 71px;
