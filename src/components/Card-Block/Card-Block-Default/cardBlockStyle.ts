@@ -891,8 +891,8 @@ export const Sum = styled.div`
   width: 30px;
   box-shadow 0 0 32px 12px #ddd;
   border-radius: 50%;
-  top: 25px;
-  left: 70px;
+  top: 10px;
+  left: 71px;
 	background-color: #ffd93c;
 	z-index: 0;
 	box-shadow: 
