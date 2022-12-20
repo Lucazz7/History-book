@@ -33,6 +33,21 @@ export default {
                 rain: 12,
                 relativeHumidity: 13,
             }
+        },
+        {
+            blockId: '222ss',
+            name: 'Storybook Exemple ClearDay',
+            abrv: 'STC',
+            blockParent: 'dsd',
+            leafParent: false,
+            date: '2012',
+            data: {
+                windSpeed: 2,
+                solarIrradiation: 22,
+                temperature: 22,
+                rain: 0,
+                relativeHumidity: 13,
+            }
         }],
     },
 } as Meta;
