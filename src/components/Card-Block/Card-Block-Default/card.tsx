@@ -2,7 +2,7 @@ import { BsCloudLightningRainFill, BsSunFill } from "react-icons/bs";
 import { BiWind } from "react-icons/bi";
 import { WiHumidity } from "react-icons/wi";
 import { FaTemperatureHigh } from "react-icons/fa";
-import { CardCol, CardsCols, ContainerBack, ContainerCardBlock, ContainerCardsWrapper, ContainerFront, Fog, Fog2, Fog3, Fog4, Fog5, Frame, HexagonAndCardGrid, InfoBlock, Thing } from "../cardBlockStyle";
+import { CardCol, CardsCols, ContainerBack, ContainerCardBlock, ContainerCardsWrapper, ContainerFront, Fog, Fog2, Fog3, Fog4, Fog5, Frame, HexagonAndCardGrid, InfoBlock, Thing } from "./cardBlockStyle";
 import { useEffect, useMemo } from "react";
 import './effectRain.scss';
 

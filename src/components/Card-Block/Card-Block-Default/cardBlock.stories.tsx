@@ -2,7 +2,7 @@ import { Meta } from "@storybook/react";
 import { CardBlock } from "./card";
 
 export default {
-    title: "Components/CardsBlocks",
+    title: "Components/CardsBlocks/CardDefaults",
     component: CardBlock,
     args: {
         blocks: [{
