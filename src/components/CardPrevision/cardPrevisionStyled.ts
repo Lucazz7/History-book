@@ -29,7 +29,7 @@ export const DivIconsTemp = styled.div<{ indexPrevision?: string }>`
     display: flex;
 
     align-items: center;
-    margin-left: ${props => props.indexPrevision === 'present' ? '2rem' : '3.5rem'}
+    margin-left: ${props => props.indexPrevision === 'present' ? '2rem' : '3.5rem'};
     justify-content: center;
     color: ${({ theme }) => theme.text};
     position: relative;
