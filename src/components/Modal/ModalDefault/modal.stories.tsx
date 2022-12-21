@@ -14,11 +14,12 @@ export default {
 } as Meta;
 
 export const ModalCreated: Story<ModalProps> = (args) => (
-    <OpenModal {...args}></OpenModal>
+    <OpenModal {...args} />
 )
 
 export const ModalDelete: Story<ModalProps> = (args) => (
-    <OpenModal {...args}></OpenModal>
+    <OpenModal {...args} />
+
 )
 
 ModalDelete.args = {
@@ -27,7 +28,7 @@ ModalDelete.args = {
 }
 
 export const ModalEdit: Story<ModalProps> = (args) => (
-    <OpenModal {...args}></OpenModal>
+    <OpenModal {...args} />
 )
 
 ModalEdit.args = {

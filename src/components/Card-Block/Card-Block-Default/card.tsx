@@ -23,7 +23,7 @@ export type Blocks = {
 };
 
 
-interface CardsProps {
+export interface CardsProps {
     blocks?: Blocks[];
     blockSelected?: string;
 }

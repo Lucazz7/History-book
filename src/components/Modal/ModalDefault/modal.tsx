@@ -3,9 +3,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import Modal from "react-bootstrap/esm/Modal";
 import { Input } from "../../Inputs/InputStyle";
 import { Button, variantToColor } from "../../Buttons/buttonStyle";
-import { If } from "../../../operators";
 import { ComboBoxDefault } from "../../ComboBox/ComboBoxDefault/ComboBox";
-import { Blocks } from "../../Card-Block/Card-Block-Default/card";
 import { CheckBoxDefault } from "../../CheckBox/CheckBoxDefault/CheckBox";
 
 
