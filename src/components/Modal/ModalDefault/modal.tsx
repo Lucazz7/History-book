@@ -9,7 +9,7 @@ import { Blocks } from "../../Card-Block/Card-Block-Default/card";
 import { CheckBoxDefault } from "../../CheckBox/CheckBoxDefault/CheckBox";
 
 
-interface ModalProps {
+export interface ModalProps {
     title: string;
     editOrCreated: 'edit' | 'create' | 'delete' | 'close';
     isHistory?: boolean;
