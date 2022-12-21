@@ -1,6 +1,6 @@
-import { Meta } from "@storybook/react";
-import App from "../../../App";
-import { ButtonDefault } from "./button";
+import { Meta, Story } from "@storybook/react";
+import { Button, ContainerButtonProps } from "../buttonStyle";
+import { bottomProps, ButtonDefault } from "./button";
 
 export default {
   title: "Components/Buttons",
@@ -8,7 +8,26 @@ export default {
   args: {
     buttonName: "Button",
     widthButton: 15,
+    variation: 'primary',
   },
 } as Meta;
 
-export const ButtonPadrao = {};
+export const ButtonPrimary: Story<bottomProps> = (args) => (
+  <ButtonDefault {...args}>Basic Button </ButtonDefault>
+);
+
+export const ButtonSecondary: Story<bottomProps> = (args) => (
+  <ButtonDefault {...args}>Basic Button </ButtonDefault>
+);
+
+ButtonSecondary.args = {
+  variation: 'secondary',
+}
+
+export const ButtonOutLine: Story<bottomProps> = (args) => (
+  <ButtonDefault {...args}>Basic Button </ButtonDefault>
+);
+
+ButtonOutLine.args = {
+  variation: 'outline',
+}

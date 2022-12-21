@@ -3,9 +3,11 @@ import { BsCloudUploadFill } from "react-icons/bs";
 import { SpanStyle } from "../SpanStyle";
 import { ButtonDefault } from "../../Buttons/ButtonDefault/button";
 import { useState } from "react";
+import { variantToColor } from "../../Buttons/buttonStyle";
 
 export const inputFile = () => {
   const [upload, setUpload] = useState(false);
+
   return (
     <FileBox>
       <BoxFile>
@@ -19,6 +21,7 @@ export const inputFile = () => {
         <ButtonDefault
           widthButton={50}
           disableButton={false}
+          variation={'primary'}
           buttonName="Enviar"
           setClick={() => setUpload(!upload)}
         />

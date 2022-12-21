@@ -7,7 +7,7 @@ export const lightTheme = {
   primary: '#FF7F2F',
   primaryAlpha: 'rgb(50,50,50)',
   txtButton: '#e6e6e6',
-  history: '#DCDCDC'
+  border: '#DCDCDC'
 };
 export const darkTheme = {
   bg: '#00071d',
@@ -18,5 +18,5 @@ export const darkTheme = {
   primary: '#FF7F2F',
   primaryAlpha: 'rgb(50,50,50)',
   txtButton: '#fff',
-  history: 'rgb(210,210,210, 0.2)'
+  border: 'rgb(210,210,210, 0.2)'
 };

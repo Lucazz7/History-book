@@ -1,23 +1,28 @@
-import { Button } from "../buttonStyle";
+import { Button, variantToColor } from "../buttonStyle";
 
-interface bottonProps {
+export interface bottomProps {
   buttonName: string;
   click?: boolean;
   setClick: (click: any) => void;
   widthButton: 15 | 50 | 100;
   disableButton: boolean;
+  variation: 'primary' | 'secondary' | 'outline';
 }
 
-export const ButtonDefault: React.FC<bottonProps> = ({
+export const ButtonDefault: React.FC<bottomProps> = ({
   buttonName,
   click,
   setClick,
   widthButton,
-  disableButton
-}: bottonProps) => {
+  disableButton,
+  variation
+}: bottomProps) => {
+
+  const { bgColor, borderColor, color, hover } = variantToColor[variation];
+
   return (
     <>
-      <Button disabled={disableButton} width={widthButton} active={disableButton} onClick={() => setClick(!click)}>{buttonName}</Button>
+      <Button disabled={disableButton} width={widthButton} active={disableButton} bgColor={bgColor} borderColor={borderColor} color={color} hover={hover} onClick={() => setClick(!click)}>{buttonName}</Button>
     </>
   );
 };

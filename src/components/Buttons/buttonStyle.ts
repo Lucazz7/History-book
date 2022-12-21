@@ -1,21 +1,63 @@
 import styled from "styled-components";
+import { darkTheme, lightTheme } from "../../styles/theme";
 
-export const Button = styled.button<{ width: number, height?: number, active: boolean }>`
+export interface ContainerButtonProps {
+  bgColor: string;
+  borderColor: string;
+  color: string;
+  hover: {
+    bgColor: string;
+    color: string;
+  }
+  width: 15 | 50 | 100;
+  active: boolean;
+}
+
+export const variantToColor = {
+  primary: {
+    bgColor: lightTheme.primary,
+    borderColor: lightTheme.border,
+    color: lightTheme.text,
+    hover: {
+      bgColor: darkTheme.bg,
+      color: darkTheme.text
+    }
+  },
+  secondary: {
+    bgColor: darkTheme.bg3,
+    borderColor: darkTheme.border,
+    color: darkTheme.text,
+    hover: {
+      bgColor: lightTheme.bg,
+      color: lightTheme.text
+    }
+  },
+  outline: {
+    bgColor: darkTheme.bg2,
+    borderColor: darkTheme.text,
+    color: darkTheme.text,
+    hover: {
+      bgColor: lightTheme.text,
+      color: lightTheme.text
+    }
+  },
+}
+
+export const Button = styled.button<ContainerButtonProps>`
   color: #fff;
   cursor: pointer;
-  background: ${props => props.active ? '#ff7f2f' : 'grey'};
+  background: ${props => props.bgColor};
   font-size: 1.2rem;
-  height: ${props => props.height}%;
   width: ${props => props.width}%;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: lighter;
   margin-bottom: 30px;
   padding: 10px;
 
   &:hover {
     background: ${props => props.active ? '#ecf0f1' : 'grey'}; 
-    color: ${props => props.active ? 'black' : ''}; ;
+    color: ${props => props.active ? 'black' : ''}; 
   }
 `;
