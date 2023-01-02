@@ -30,3 +30,16 @@ export const TimelineDaughter = styled.div`
     min-height: 2rem;
   }
 `;
+
+export const TimelineCenter = styled.div`
+  left: 50%;
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  width: 60%;
+  padding: 40px;
+  height: 10rem;
+  text-align: center;
+  position: relative;
+  animation: bg-spin 3s linear infinite;
+`;

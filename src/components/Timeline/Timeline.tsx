@@ -64,7 +64,7 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                   ArrayTimeline[index - 1].rain > 2 &&
                   ArrayTimeline[index - 1].alert === null
                     ? {
-                        borderTop: "3px solid",
+                        borderTop: "5px solid",
                         borderImage: `${
                           item.windSpeed === undefined
                             ? "linear-gradient(#B5B5B5, #B5B5B5) 30"
@@ -113,7 +113,7 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                 style={
                   index > 0 && ArrayTimeline[index - 1].rain < 2
                     ? {
-                        borderTop: "3px solid",
+                        borderTop: "5px solid",
                         borderImage: `${
                           item.windSpeed === undefined
                             ? "linear-gradient(#B5B5B5, #B5B5B5) 30"
@@ -123,7 +123,7 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                     : index < ArrayTimeline.length - 1 &&
                       ArrayTimeline[index + 1].alert !== null
                     ? {
-                        borderBottom: "3px solid",
+                        borderBottom: "5px solid",
                         borderImage: `${
                           item.windSpeed === undefined
                             ? "linear-gradient(#B5B5B5, #B5B5B5) 30"
@@ -132,7 +132,7 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                       }
                     : index > 0 && ArrayTimeline[index - 1].alert !== null
                     ? {
-                        borderTop: "3px solid",
+                        borderTop: "5px solid",
                         borderImage: `${
                           item.windSpeed === undefined
                             ? "linear-gradient(#B5B5B5, #B5B5B5) 30"
@@ -182,8 +182,8 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                   ArrayTimeline[index - 1].alert === null &&
                   ArrayTimeline[index + 1].alert === null
                     ? {
-                        borderTop: "3px solid",
-                        borderBottom: "3px solid",
+                        borderTop: "5px solid",
+                        borderBottom: "5px solid",
                         borderImage: `${
                           item.windSpeed === undefined
                             ? "linear-gradient(#B5B5B5, #B5B5B5) 30"
@@ -192,7 +192,7 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                       }
                     : index > 0 && ArrayTimeline[index - 1].alert === null
                     ? {
-                        borderTop: "3px solid",
+                        borderTop: "5px solid",
                         borderImage: `${
                           item.windSpeed === undefined
                             ? "linear-gradient(#B5B5B5, #B5B5B5) 30"
@@ -202,7 +202,7 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                     : index < ArrayTimeline.length - 1 &&
                       ArrayTimeline[index + 1].alert === null
                     ? {
-                        borderBottom: "3px solid",
+                        borderBottom: "5px solid",
                         borderImage: `${
                           item.windSpeed === undefined
                             ? "linear-gradient(#B5B5B5, #B5B5B5) 30"
