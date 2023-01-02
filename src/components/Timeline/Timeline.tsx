@@ -78,15 +78,6 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                     : { borderImage: "linear-gradient(#FF7F2F, #FF7F2F) 30" }
                 } //MEIO
               >
-                <div className="icone-centro">
-                  <BsFillCircleFill
-                    style={
-                      item.windSpeed === undefined
-                        ? { color: "#B5B5B5" }
-                        : { color: "#FF7F2F" }
-                    }
-                  />
-                </div>
                 <div>
                   <div className="day">
                     <>
