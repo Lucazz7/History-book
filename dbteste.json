@@ -1,0 +1,223 @@
+{
+  "Timeline": [
+    {
+      "blockId": "EXEMPLO1",
+      "name": "EXAMPLE",
+      "past": [
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "rain": 4,
+          "relativeHumidity": 20,
+          "solarIrradiation": 5,
+          "temperatureAverage": 95,
+          "temperatureMax": 75,
+          "temperatureMin": 80,
+          "windSpeed": 95,
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "rain": 1,
+          "relativeHumidity": 100,
+          "solarIrradiation": 20,
+          "temperatureAverage": 45,
+          "temperatureMax": 5,
+          "temperatureMin": 45,
+          "windSpeed": 10,
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "rain": 10,
+          "relativeHumidity": 60,
+          "solarIrradiation": 60,
+          "temperatureAverage": 30,
+          "temperatureMax": 25,
+          "temperatureMin": 30,
+          "windSpeed": 80,
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "rain": 10,
+          "relativeHumidity": 75,
+          "solarIrradiation": 50,
+          "temperatureAverage": 100,
+          "temperatureMax": 65,
+          "temperatureMin": 95,
+          "windSpeed": 95,
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "rain": 0,
+          "relativeHumidity": 35,
+          "solarIrradiation": 80,
+          "temperatureAverage": 70,
+          "temperatureMax": 95,
+          "temperatureMin": 25,
+          "windSpeed": 0,
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "rain": 4,
+          "relativeHumidity": 40,
+          "solarIrradiation": 85,
+          "temperatureAverage": 10,
+          "temperatureMax": 15,
+          "temperatureMin": 95,
+          "windSpeed": 5,
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "rain": 2,
+          "relativeHumidity": 30,
+          "solarIrradiation": 30,
+          "temperatureAverage": 95,
+          "temperatureMax": 5,
+          "temperatureMin": 55,
+          "windSpeed": 35,
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "rain": 10,
+          "relativeHumidity": 65,
+          "solarIrradiation": 10,
+          "temperatureAverage": 5,
+          "temperatureMax": 90,
+          "temperatureMin": 95,
+          "windSpeed": 35,
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "rain": 10,
+          "relativeHumidity": 0,
+          "solarIrradiation": 55,
+          "temperatureAverage": 25,
+          "temperatureMax": 95,
+          "temperatureMin": 10,
+          "windSpeed": 60,
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "rain": 0,
+          "relativeHumidity": 80,
+          "solarIrradiation": 5,
+          "temperatureAverage": 50,
+          "temperatureMax": 55,
+          "temperatureMin": 15,
+          "windSpeed": 60,
+          "alert": null
+        }
+      ],
+      "present": {
+        "date": "2022-12-01T14:29:41.024Z",
+        "rain": 0,
+        "relativeHumidity": 40,
+        "solarIrradiation": 25,
+        "temperatureAverage": 65,
+        "temperatureMax": 90,
+        "temperatureMin": 25,
+        "windSpeed": 75,
+        "alert": null
+      },
+      "forecast": [
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "temperatureMin": 40,
+          "temperatureMax": 20,
+          "rain": 4,
+          "rainProbability": 95,
+          "rainPrediction": "",
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "temperatureMin": 75,
+          "temperatureMax": 45,
+          "rain": 2,
+          "rainProbability": 60,
+          "rainPrediction": "",
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "temperatureMin": 75,
+          "temperatureMax": 60,
+          "rain": 1,
+          "rainProbability": 20,
+          "rainPrediction": "",
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "temperatureMin": 55,
+          "temperatureMax": 10,
+          "rain": 2,
+          "rainProbability": 5,
+          "rainPrediction": "",
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "temperatureMin": 85,
+          "temperatureMax": 95,
+          "rain": 1,
+          "rainProbability": 15,
+          "rainPrediction": "",
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "temperatureMin": 5,
+          "temperatureMax": 60,
+          "rain": 4,
+          "rainProbability": 25,
+          "rainPrediction": "",
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "temperatureMin": 100,
+          "temperatureMax": 85,
+          "rain": 4,
+          "rainProbability": 30,
+          "rainPrediction": "",
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "temperatureMin": 35,
+          "temperatureMax": 80,
+          "rain": 2,
+          "rainProbability": 95,
+          "rainPrediction": "",
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "temperatureMin": 50,
+          "temperatureMax": 90,
+          "rain": 0,
+          "rainProbability": 20,
+          "rainPrediction": "",
+          "alert": null
+        },
+        {
+          "date": "2022-12-01T14:29:41.024Z",
+          "temperatureMin": 60,
+          "temperatureMax": 5,
+          "rain": 1,
+          "rainProbability": 60,
+          "rainPrediction": "",
+          "alert": null
+        }
+      ]
+    }
+  ]
+}
