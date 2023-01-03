@@ -24,7 +24,13 @@
           "temperatureMax": 5,
           "temperatureMin": 40,
           "windSpeed": 40,
-          "alert": null
+          "alert": {
+            "type": 1,
+            "info": "string",
+            "level": 3,
+            "start": "string",
+            "finish": "ttt"
+          }
         },
         {
           "date": "2022-11-29",

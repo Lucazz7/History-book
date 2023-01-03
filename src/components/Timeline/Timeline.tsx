@@ -3,8 +3,10 @@ import {
   TimelineCenter,
   TimelineDad,
   TimelineDate,
+  TimelineDateLeft,
   TimelineDaughter,
   TimelineInfo,
+  TimelineInfoLeft,
   TimelineInfoRight,
   TimelineLeft,
   TimelineRight,
@@ -185,14 +187,14 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                 }
               >
                 <TimelineInfo>
-                  <>
+                  <TimelineDateLeft>
+                    {format(new Date(item.date), "dd/MM")}
+                  </TimelineDateLeft>
+
+                  <TimelineInfoLeft>
                     <TbSnowflake />
                     {item.alert?.info}
-                    <br />
-                  </>
-                  <TimelineDate>
-                    {format(new Date(item.date), "dd/MM")}
-                  </TimelineDate>
+                  </TimelineInfoLeft>
                 </TimelineInfo>
               </TimelineLeft>
             )}

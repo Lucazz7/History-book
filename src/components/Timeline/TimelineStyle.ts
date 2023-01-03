@@ -64,10 +64,14 @@ export const TimelineLeft = styled.div`
   border-left: 5px solid;
   border-image-slice: 1;
   border-width: 5px;
-  width: 50.6%;
+  width: 50%;
+  height: 10rem;
   margin: 0;
   padding: 40px;
   position: relative;
+  padding-left: 0;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
 `;
 
 export const TimelineInfo = styled.div`
@@ -81,6 +85,21 @@ export const TimelineDate = styled.div`
   right: 20.9rem;
 `;
 
+export const TimelineDateLeft = styled.div`
+  position: absolute;
+  top: 4rem;
+  right: 3.7rem;
+`;
+
 export const TimelineInfoRight = styled.div`
   margin-left: 2.5rem;
+`;
+
+export const TimelineInfoLeft = styled.div`
+  position: absolute;
+  left: -10rem;
+  margin-top: -1.5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 `;
