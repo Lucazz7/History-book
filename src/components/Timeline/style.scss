@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+}
+
+.icon {
+  font-size: 2rem;
+  position: absolute;
+  cursor: pointer;
+  margin-left: 11.4rem;
+}
+.icon-center {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -53.8rem;
+}
+
+.container:hover .popup {
+  opacity: 1;
+  display: block;
+}
+
+.popup {
+  position: absolute;
+  transition: all 0.25s ease;
+  opacity: 0;
+  display: block;
+  border: 1px solid rgb(22, 18, 18);
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}

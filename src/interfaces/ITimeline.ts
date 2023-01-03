@@ -5,14 +5,14 @@ export interface TimelineComponent {
 export interface TimelineDado {
   date: Date;
   rain: number;
-  relativeHumidity?: number;
+  relativeHumidity?: any;
   solarIrradiation?: number;
   temperatureAverage?: number;
   rainProbability?: number;
   rainPrediction?: string;
   temperatureMax: number;
   temperatureMin: number;
-  windSpeed?: number;
+  windSpeed?: any;
   alert?: {
     type?: number;
     info?: string;

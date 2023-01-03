@@ -31,7 +31,7 @@ export default {
             windSpeed: 40,
             alert: {
               type: 1,
-              info: "string",
+              info: "GEADA",
               level: 3,
               start: "string",
               finish: "ttt",

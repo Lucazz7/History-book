@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const TimelineDad = styled.div`
   font-family: $font-sans;
   display: flex;
+  background-color: #808080;
   justify-content: center;
+  overflow: scroll;
   align-items: center;
   justify-content: space-around;
   position: relative;
