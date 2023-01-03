@@ -21,38 +21,17 @@ import { BsCloudRainFill } from "react-icons/bs";
 import { TbSnowflake } from "react-icons/tb";
 import { format } from "date-fns";
 
-export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
-  const [dado, setDado] = useState<ITimeline[]>([]);
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:3000/Timeline/?blockId=${blockId}`)
-      .then((res) => {
-        setDado(res.data);
-        if (res.data.length === 0) {
-          axios
-            .get(`http://localhost:3000/Timeline/?blockId=EXEMPLO1`)
-            .then((res) => {
-              setDado(res.data);
-            });
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
+export const Timeline: React.FC<TimelineComponent> = ({ BlocoTimeline }) => {
   const ArrayTimeline = useMemo(() => {
     const arrTime: TimelineDado[] = [];
-
-    dado.forEach((item) => {
+    BlocoTimeline.forEach((item) => {
       arrTime.unshift(...item.forecast);
       arrTime.unshift(item.present);
       arrTime.unshift(...item.past);
     });
 
     return arrTime.reverse();
-  }, [dado]);
+  }, []);
   return (
     <TimelineDad>
       <TimelineDaughter>

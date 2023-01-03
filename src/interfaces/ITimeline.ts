@@ -1,5 +1,5 @@
 export interface TimelineComponent {
-  blockId: string;
+  BlocoTimeline: ITimeline[];
 }
 
 export interface TimelineDado {
