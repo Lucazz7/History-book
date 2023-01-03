@@ -1,23 +1,23 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { TimelineDad, TimelineDaughter } from "./TimelineStyle";
+import {
+  TimelineCenter,
+  TimelineDad,
+  TimelineDate,
+  TimelineDaughter,
+  TimelineInfo,
+  TimelineInfoRight,
+  TimelineLeft,
+  TimelineRight,
+} from "./TimelineStyle";
 import {
   ITimeline,
   TimelineComponent,
   TimelineDado,
 } from "../../interfaces/ITimeline";
 import axios from "axios";
-import {
-  BsCloudRainFill,
-  BsFillCircleFill,
-  BsFillCloudRainFill,
-  BsFillExclamationTriangleFill,
-} from "react-icons/bs";
+import { BsCloudRainFill } from "react-icons/bs";
 import { TbSnowflake } from "react-icons/tb";
-import { GiLevelEndFlag } from "react-icons/gi";
-import "./Timelineee.scss";
-
 import { format } from "date-fns";
-import If from "../../operators/if";
 
 export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
   const [dado, setDado] = useState<ITimeline[]>([]);
@@ -57,8 +57,7 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
         {ArrayTimeline.map((item, index) => (
           <>
             {item.rain < 2 && item.alert === null && (
-              <div
-                className="centro"
+              <TimelineCenter
                 style={
                   index > 0 &&
                   ArrayTimeline[index - 1].rain > 2 &&
@@ -76,40 +75,25 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                         borderImage: "linear-gradient(#B5B5B5, #B5B5B5) 30",
                       }
                     : { borderImage: "linear-gradient(#FF7F2F, #FF7F2F) 30" }
-                } //MEIO
+                }
               >
-                <div>
-                  <div className="day">
+                <>
+                  <TimelineInfo>
                     <>
                       <BsCloudRainFill />
                       {Math.round(item.rain)}mm
                       <br />
                     </>
 
-                    <div
-                      style={{
-                        position: "absolute",
-                        right: "15rem",
-                        top: "0.5rem",
-                      }}
-                    >
-                      <div
-                        style={{
-                          marginTop: "4.3rem",
-                          position: "absolute",
-                          right: "6rem",
-                        }}
-                      >
-                        {format(new Date(item.date), "dd/MM")}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    <TimelineDate>
+                      {format(new Date(item.date), "dd/MM")}
+                    </TimelineDate>
+                  </TimelineInfo>
+                </>
+              </TimelineCenter>
             )}
             {item.rain > 2 && item.alert === null && (
-              <div
-                className="direita" /// Direita
+              <TimelineRight
                 style={
                   index > 0 && ArrayTimeline[index - 1].rain < 2
                     ? {
@@ -146,36 +130,20 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                     : { borderImage: "linear-gradient(#FF7F2F, #FF7F2F) 30" }
                 }
               >
-                <div
-                  className="icone-direita" //Icone direita
-                >
-                  <BsFillCloudRainFill />
-                </div>
-                <div className="info">
-                  <div className="chuva">
-                    <>
-                      <BsCloudRainFill />
-                      {Math.round(item.rain)}mm
-                      <br />
-                    </>
-
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "4.7rem",
-                        right: "20.9rem",
-                      }}
-                    >
-                      {format(new Date(item.date), "dd/MM")}
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <TimelineInfo>
+                  <TimelineInfoRight>
+                    <BsCloudRainFill />
+                    {Math.round(item.rain)}mm
+                  </TimelineInfoRight>
+                  <TimelineDate>
+                    {format(new Date(item.date), "dd/MM")}
+                  </TimelineDate>
+                </TimelineInfo>
+              </TimelineRight>
             )}
 
             {item.alert !== null && (
-              <div
-                className="esquerda" //esquerda
+              <TimelineLeft //esquerda
                 style={
                   index > 0 &&
                   index < ArrayTimeline.length - 1 &&
@@ -216,29 +184,17 @@ export const Timeline: React.FC<TimelineComponent> = ({ blockId }) => {
                     : { borderImage: "linear-gradient(#FF7F2F, #FF7F2F) 30" }
                 }
               >
-                <div
-                  className="icone-esquerda" //Icone
-                >
-                  <BsFillExclamationTriangleFill />
-                </div>
-
-                <div>
-                  <div className="alert">
-                    <div className="alerta">
-                      <p>
-                        <TbSnowflake />
-                        {item.alert?.info}
-                      </p>
-                      <GiLevelEndFlag />
-                      {item.alert?.level}
-                      <br />
-                      <div style={{ position: "absolute", right: "7rem" }}>
-                        {format(new Date(item.date), "dd/MM")}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <TimelineInfo>
+                  <>
+                    <TbSnowflake />
+                    {item.alert?.info}
+                    <br />
+                  </>
+                  <TimelineDate>
+                    {format(new Date(item.date), "dd/MM")}
+                  </TimelineDate>
+                </TimelineInfo>
+              </TimelineLeft>
             )}
           </>
         ))}

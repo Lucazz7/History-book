@@ -42,4 +42,45 @@ export const TimelineCenter = styled.div`
   text-align: center;
   position: relative;
   animation: bg-spin 3s linear infinite;
+  border-left: 5px solid #ff7f2f;
+`;
+
+export const TimelineRight = styled.div`
+  font-size: 1em;
+  border-right: 5px solid;
+  left: 50%;
+  border-image-slice: 1;
+  border-width: 5px;
+  width: 60%;
+  height: 10rem;
+  margin: 0;
+  padding: 40px;
+  position: relative;
+  padding-right: 0;
+  margin-top: -0.2rem;
+`;
+
+export const TimelineLeft = styled.div`
+  border-left: 5px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  width: 50.6%;
+  margin: 0;
+  padding: 40px;
+  position: relative;
+`;
+
+export const TimelineInfo = styled.div`
+  display: inline-block;
+  align-items: center;
+`;
+
+export const TimelineDate = styled.div`
+  position: absolute;
+  top: 4rem;
+  right: 20.9rem;
+`;
+
+export const TimelineInfoRight = styled.div`
+  margin-left: 2.5rem;
 `;
