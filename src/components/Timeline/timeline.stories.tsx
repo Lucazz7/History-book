@@ -4,7 +4,7 @@ export default {
   title: "Components/Timeline",
   component: Timeline,
   args: {
-    Timeline: [
+    BlocosTimeline: [
       {
         blockId: "EXEMPLO1",
         name: "EXAMPLE",

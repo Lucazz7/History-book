@@ -21,10 +21,10 @@ import { BsCloudRainFill } from "react-icons/bs";
 import { TbSnowflake } from "react-icons/tb";
 import { format } from "date-fns";
 
-export const Timeline: React.FC<TimelineComponent> = ({ BlocoTimeline }) => {
+export const Timeline: React.FC<TimelineComponent> = ({ BlocosTimeline }) => {
   const ArrayTimeline = useMemo(() => {
     const arrTime: TimelineDado[] = [];
-    BlocoTimeline.forEach((item) => {
+    BlocosTimeline.forEach((item) => {
       arrTime.unshift(...item.forecast);
       arrTime.unshift(item.present);
       arrTime.unshift(...item.past);
