@@ -1,7 +1,7 @@
 import { Button } from "../buttonStyle";
 
 interface bottonProps {
-  buttonName: string;
+  buttonName: string | JSX.Element;
   click?: boolean;
   setClick: (click: any) => void;
 }
