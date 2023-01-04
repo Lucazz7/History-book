@@ -5,7 +5,7 @@ export default {
   title: "Components/SideBar",
   component: SideBar,
   args: {
-    children: "SideBar",
+    children: ["SideBar", "Sidebey"],
   },
 } as Meta;
 
