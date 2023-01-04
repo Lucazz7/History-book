@@ -1,19 +1,16 @@
-import "./side.scss";
+import { SideBarComponents, SideBarItem, SideBarStyle } from "./SideBarStyle";
+
 interface SideBarComponent {
   children: string[];
 }
 
 export const SideBar: React.FC<SideBarComponent> = ({ children }) => {
   return (
-    <div className="sidebar">
-      <div className="components">
+    <SideBarStyle>
+      <SideBarComponents>
         {children &&
-          children.map((item) => (
-            <div className="component" key={item}>
-              {item}
-            </div>
-          ))}
-      </div>
-    </div>
+          children.map((item) => <SideBarItem key={item}>{item}</SideBarItem>)}
+      </SideBarComponents>
+    </SideBarStyle>
   );
 };
