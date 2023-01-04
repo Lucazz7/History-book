@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SideBarStyle = styled.div`
   width: 10%;
   height: 100%;
-
+  border-radius: 1rem 1rem;
   backdrop-filter: blur(6px);
   position: fixed;
   display: block;
@@ -23,6 +23,7 @@ export const SideBarItem = styled.div<{ hoveR: string }>`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Roboto", sans-serif;
   justify-content: center;
   width: 100%;
   height: 10%;

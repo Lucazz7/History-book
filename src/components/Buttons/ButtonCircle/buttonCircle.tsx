@@ -1,7 +1,7 @@
 import { ButtonCircle } from "../buttonStyle";
 
 interface bottonRoundProps {
-  buttonName: string;
+  buttonName: string | JSX.Element;
   click?: boolean;
   setClick: (click: any) => void;
 }
