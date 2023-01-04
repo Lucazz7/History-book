@@ -18,3 +18,16 @@ export const Button = styled.button`
     border: 1px solid #ff7f2f;
   }
 `;
+
+//TODO: Button Circle
+export const ButtonCircle = styled.button`
+  color: #fff;
+  cursor: pointer;
+  background: #ff7f2f;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: lighter;
+  padding: 2%;
+`;
