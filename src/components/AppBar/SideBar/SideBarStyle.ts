@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SideBarStyle = styled.div`
   width: 10%;
   height: 100%;
-  background: rgba(255, 94, 0, 0.989);
+
   backdrop-filter: blur(6px);
   position: fixed;
   display: block;
@@ -19,7 +19,7 @@ export const SideBarComponents = styled.div`
   width: 100%;
 `;
 
-export const SideBarItem = styled.div`
+export const SideBarItem = styled.div<{ hoveR: string }>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +29,6 @@ export const SideBarItem = styled.div`
   cursor: pointer;
   transition: 0.3s;
   &:hover {
-    background: #ffff;
+    background: ${(props) => props.hoveR};
   }
 `;

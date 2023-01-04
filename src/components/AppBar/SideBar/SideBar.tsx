@@ -2,14 +2,24 @@ import { SideBarComponents, SideBarItem, SideBarStyle } from "./SideBarStyle";
 
 interface SideBarComponent {
   children: string[];
+  color?: string;
+  hoverColor?: string;
 }
 
-export const SideBar: React.FC<SideBarComponent> = ({ children }) => {
+export const SideBar: React.FC<SideBarComponent> = ({
+  children,
+  color,
+  hoverColor,
+}) => {
   return (
-    <SideBarStyle>
+    <SideBarStyle style={{ background: `${color}` }}>
       <SideBarComponents>
         {children &&
-          children.map((item) => <SideBarItem key={item}>{item}</SideBarItem>)}
+          children.map((item) => (
+            <SideBarItem key={item} hoveR={`${hoverColor}`}>
+              {item}
+            </SideBarItem>
+          ))}
       </SideBarComponents>
     </SideBarStyle>
   );
