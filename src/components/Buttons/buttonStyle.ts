@@ -10,13 +10,11 @@ export const Button = styled.button`
   border-radius: 5px;
   font-size: 1rem;
   font-weight: lighter;
-  margin-bottom: 30px;
   padding: 10px;
 
   &:hover {
     background: #ecf0f1;
     color: black;
     border: 1px solid #ff7f2f;
-  
   }
 `;
