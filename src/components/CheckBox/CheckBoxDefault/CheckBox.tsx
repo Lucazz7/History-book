@@ -1,12 +1,25 @@
-import { useState } from "react";
-import { ButtonDefault } from "../../Buttons/ButtonDefault/button";
 import { CheckBox, CheckBoxLabel, CheckBoxWrapper } from "../CheckBox";
 
-export const checkBox = () => {
+interface checkBoxProps {
+  click?: boolean;
+  setClick: (click: any) => void;
+  backgroundChecked?: string;
+}
+
+export const checkBox: React.FC<checkBoxProps> = ({
+  click,
+  setClick,
+  backgroundChecked,
+}: checkBoxProps) => {
   return (
     <div>
       <CheckBoxWrapper>
-        <CheckBox id="checkbox" type="checkbox" />
+        <CheckBox
+          backgroundActive={`${backgroundChecked}`}
+          id="checkbox"
+          type="checkbox"
+          onClick={() => setClick(!click)}
+        />
         <CheckBoxLabel htmlFor="checkbox" />
       </CheckBoxWrapper>
     </div>

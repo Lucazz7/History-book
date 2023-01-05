@@ -4,22 +4,30 @@ import { SpanStyle } from "../SpanStyle";
 import { ButtonDefault } from "../../Buttons/ButtonDefault/button";
 import { useState } from "react";
 
-export const inputFile = () => {
-  const [upload, setUpload] = useState(false);
+interface inputFileProps {
+  click?: boolean;
+  setClick: (click: any) => void;
+  iconFile?: string | JSX.Element;
+  message: string;
+}
+
+export const inputFile: React.FC<inputFileProps> = ({
+  message,
+  setClick,
+  click,
+  iconFile,
+}) => {
   return (
     <FileBox>
       <BoxFile>
-        <SpanStyle>Upload your file</SpanStyle>
+        <SpanStyle>{message}</SpanStyle>
         <br />
         <FileLabel>
           <FileInput type="file" />
-          <BsCloudUploadFill />
+          {iconFile}
         </FileLabel>
         <br />
-        <ButtonDefault
-          buttonName="Enviar"
-          setClick={() => setUpload(!upload)}
-        />
+        <ButtonDefault buttonName="Enviar" setClick={() => setClick(!click)} />
       </BoxFile>
     </FileBox>
   );

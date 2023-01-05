@@ -8,6 +8,7 @@ export default {
     children: ["SideBar", "Sidebey"],
     color: "rgba(255, 94, 0, 0.989)",
     hoverColor: "#ffff",
+    click: true,
   },
 } as Meta;
 

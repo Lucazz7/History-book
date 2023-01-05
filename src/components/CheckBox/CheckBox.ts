@@ -24,14 +24,14 @@ export const CheckBoxLabel = styled.label`
     transition: 0.2s;
   }
 `;
-export const CheckBox = styled.input`
+export const CheckBox = styled.input<{ backgroundActive: string }>`
   opacity: 0;
   z-index: 1;
   border-radius: 15px;
   width: 42px;
   height: 26px;
   &:checked + ${CheckBoxLabel} {
-    background: #ff7f2f;
+    background: ${(props) => props.backgroundActive};
     &::after {
       content: "";
       display: block;

@@ -7,28 +7,30 @@ interface SideBarComponent {
   children: string[];
   color?: string;
   hoverColor?: string;
+  click?: boolean;
+  setClick: (click: any) => void;
 }
 
 export const SideBar: React.FC<SideBarComponent> = ({
   children,
   color,
   hoverColor,
+  click,
+  setClick,
 }) => {
-  const [open, setOpen] = useState(false);
-  console.log(open);
   return (
     <>
       <ButtonDefault
-        setClick={setOpen}
-        click={open}
+        setClick={setClick}
+        click={click}
         buttonName={<AiOutlineArrowRight />}
       />
 
-      {open ? (
+      {click ? (
         <SideBarStyle style={{ background: `${color}` }}>
           <ButtonDefault
-            setClick={setOpen}
-            click={open}
+            setClick={setClick}
+            click={click}
             buttonName={<AiOutlineArrowLeft />}
           />
 
