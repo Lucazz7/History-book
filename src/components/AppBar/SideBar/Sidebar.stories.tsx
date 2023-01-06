@@ -1,9 +1,9 @@
 import { Meta } from "@storybook/react";
-import { SideBar } from "./SideBar";
+import { SideBarPadrao } from "./SideBar";
 
 export default {
-  title: "Components/SideBar",
-  component: SideBar,
+  title: "Components/AppBar",
+  component: SideBarPadrao,
   args: {
     children: ["Dashboard", "Usuários"],
     color: "rgba(249, 124, 52, 1)",
@@ -14,4 +14,4 @@ export default {
   },
 } as Meta;
 
-export const SideBarPadrao = {};
+export const SideBar = {};

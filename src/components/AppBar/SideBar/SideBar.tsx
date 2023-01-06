@@ -18,7 +18,7 @@ interface SideBarComponent {
   colorFontHover?: string;
 }
 
-export const SideBar: React.FC<SideBarComponent> = ({
+export const SideBarPadrao: React.FC<SideBarComponent> = ({
   children,
   color,
   hoverColor,

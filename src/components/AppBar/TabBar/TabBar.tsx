@@ -1,6 +1,5 @@
 import { TabBarStyle } from "./TabBarStyled";
 import { useState } from "react";
-import { BsCircle } from "react-icons/bs";
 import { ButtonRound } from "../../Buttons/ButtonCircle/buttonCircle";
 
 interface TabBarProps {
@@ -8,18 +7,23 @@ interface TabBarProps {
   borderTab?: string;
   backgroundBotao?: string;
   corFontBotao?: string;
+  tabWidth?: string;
 }
 
 export const TabBarPadrao: React.FC<TabBarProps> = ({
   backgroundTab,
   borderTab,
   backgroundBotao,
-  corFontBotao,
+  tabWidth,
 }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <TabBarStyle backgroundTab={`${backgroundTab}`} borderTab={`${borderTab}`}>
+    <TabBarStyle
+      widthTab={`${tabWidth}`}
+      backgroundTab={`${backgroundTab}`}
+      borderTab={`${borderTab}`}
+    >
       <ButtonRound
         backgroundCor={`${backgroundBotao}`}
         setClick={setOpen}
