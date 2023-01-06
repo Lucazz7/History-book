@@ -5,10 +5,12 @@ export default {
   title: "Components/SideBar",
   component: SideBar,
   args: {
-    children: ["SideBar", "Sidebey"],
-    color: "rgba(255, 94, 0, 0.989)",
+    children: ["Dashboard", "Usuários"],
+    color: "rgba(249, 124, 52, 1)",
     hoverColor: "#ffff",
     click: true,
+    colorFont: "#ffff",
+    colorFontHover: "black",
   },
 } as Meta;
 

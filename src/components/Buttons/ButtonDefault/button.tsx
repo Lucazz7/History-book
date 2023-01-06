@@ -7,6 +7,7 @@ interface bottonProps {
   backgroundColorButton?: string;
   ColorFontStatic?: string;
   ColorFontHover?: string;
+  width?: string;
 }
 
 export const ButtonDefault: React.FC<bottonProps> = ({
@@ -16,10 +17,12 @@ export const ButtonDefault: React.FC<bottonProps> = ({
   backgroundColorButton,
   ColorFontHover,
   ColorFontStatic,
+  width,
 }: bottonProps) => {
   return (
     <>
       <Button
+        widthButton={`${width}`}
         ColorFontHover={`${ColorFontHover}`}
         ColorFontStatic={`${ColorFontStatic}`}
         backgroundColorButton={`${backgroundColorButton}`}

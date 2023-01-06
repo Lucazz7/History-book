@@ -4,9 +4,11 @@ export const Button = styled.button<{
   backgroundColorButton: string;
   ColorFontStatic: string;
   ColorFontHover: string;
+  widthButton: string;
 }>`
   color: ${(props) => props.ColorFontStatic};
   cursor: pointer;
+  width: ${(props) => props.widthButton};
   background: ${(props) => props.backgroundColorButton};
   font-size: 1.2rem;
   height: 45px;

@@ -9,6 +9,7 @@ export default {
     backgroundColorButton: "#ff7f2f",
     ColorFontStatic: "white",
     ColorFontHover: "black",
+    width: "25%",
   },
 } as Meta;
 

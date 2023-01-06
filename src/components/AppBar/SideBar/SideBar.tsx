@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { SideBarComponents, SideBarItem, SideBarStyle } from "./SideBarStyle";
+import {
+  SideBarComponents,
+  SideBarItem,
+  SideBarLogo,
+  SideBarStyle,
+} from "./SideBarStyle";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { ButtonDefault } from "../../Buttons/ButtonDefault/button";
 
@@ -9,6 +14,8 @@ interface SideBarComponent {
   hoverColor?: string;
   click?: boolean;
   setClick: (click: any) => void;
+  colorFont?: string;
+  colorFontHover?: string;
 }
 
 export const SideBar: React.FC<SideBarComponent> = ({
@@ -17,6 +24,8 @@ export const SideBar: React.FC<SideBarComponent> = ({
   hoverColor,
   click,
   setClick,
+  colorFont,
+  colorFontHover,
 }) => {
   return (
     <>
@@ -28,19 +37,24 @@ export const SideBar: React.FC<SideBarComponent> = ({
 
       {click ? (
         <SideBarStyle style={{ background: `${color}` }}>
-          <ButtonDefault
-            setClick={setClick}
-            click={click}
-            buttonName={<AiOutlineArrowLeft />}
-          />
-
+          <SideBarLogo />
           <SideBarComponents>
             {children &&
               children.map((item) => (
-                <SideBarItem key={item} hoveR={`${hoverColor}`}>
+                <SideBarItem
+                  key={item}
+                  hoveR={`${hoverColor}`}
+                  colorItem={`${colorFont}`}
+                  colorItemHover={`${colorFontHover}`}
+                >
                   {item}
                 </SideBarItem>
               ))}
+            <ButtonDefault
+              setClick={setClick}
+              click={click}
+              buttonName={<AiOutlineArrowLeft />}
+            />
           </SideBarComponents>
         </SideBarStyle>
       ) : (
