@@ -1,5 +1,4 @@
 import { Meta } from "@storybook/react";
-import App from "../../../App";
 import { ButtonDefault } from "./button";
 
 export default {
@@ -7,6 +6,9 @@ export default {
   component: ButtonDefault,
   args: {
     buttonName: "Button",
+    backgroundColorButton: "#ff7f2f",
+    ColorFontStatic: "white",
+    ColorFontHover: "black",
   },
 } as Meta;
 

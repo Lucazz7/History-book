@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
-  color: #fff;
+export const Button = styled.button<{
+  backgroundColorButton: string;
+  ColorFontStatic: string;
+  ColorFontHover: string;
+}>`
+  color: ${(props) => props.ColorFontStatic};
   cursor: pointer;
-  background: #ff7f2f;
+  background: ${(props) => props.backgroundColorButton};
   font-size: 1.2rem;
   height: 45px;
   border: none;
@@ -14,8 +18,8 @@ export const Button = styled.button`
 
   &:hover {
     background: #ecf0f1;
-    color: black;
-    border: 1px solid #ff7f2f;
+    color: ${(props) => props.ColorFontHover};
+    border: 1px solid ${(props) => props.backgroundColorButton};
   }
 `;
 
