@@ -6,6 +6,8 @@ export default {
   component: ButtonRound,
   args: {
     buttonName: "Button",
+    backgroundCor: "#ff5e00",
+    fontCorBotao: "white",
   },
 } as Meta;
 

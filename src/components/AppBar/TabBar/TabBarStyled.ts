@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-export const TabBarStyle = styled.div`
-  background: #808080;
+export const TabBarStyle = styled.div<{
+  backgroundTab: string;
+  borderTab: string;
+}>`
+  background: ${(props) => props.backgroundTab};
   display: flex;
+  border-radius: ${(props) => props.borderTab};
   flex-direction: center;
   align-items: center;
   justify-content: space-around;

@@ -26,19 +26,20 @@ export const Button = styled.button<{
 `;
 
 //TODO: Button Circle
-export const ButtonCircle = styled.button`
-  color: #fff;
-  cursor: pointer;
-  background: #ff7f2f;
-  font-size: 1.2rem;
+export const ButtonCircle = styled.button<{
+  backgroundCor: string;
+  corFontBotao: string;
+}>`
+  background: ${(props) => props.backgroundCor};
+  padding: 20px;
+  text-align: center;
   border: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
   border-radius: 50%;
-  font-size: 1rem;
-  font-weight: lighter;
-  padding: 2%;
+  color: ${(props) => props.corFontBotao};
   &:hover {
     background: #ecf0f1;
-    color: black;
-    border: 1px solid #ff7f2f;
   }
 `;
