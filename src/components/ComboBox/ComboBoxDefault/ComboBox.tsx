@@ -2,15 +2,24 @@ import { ComboBox, ComboBoxOption } from "../ComboBox";
 
 interface ComboBoxProps {
   option: string[];
+  widthComboBox?: string;
+  colorComboBox?: string;
+  messageComboBox?: string;
 }
 
 export const ComboBoxDefault: React.FC<ComboBoxProps> = ({
   option,
+  widthComboBox,
+  colorComboBox,
+  messageComboBox,
 }: ComboBoxProps) => {
   return (
-    <ComboBox>
+    <ComboBox
+      comboBoxWidth={`${widthComboBox}`}
+      comboBoxColor={`${colorComboBox}`}
+    >
       <>
-        <ComboBoxOption>Please Select...</ComboBoxOption>
+        <ComboBoxOption>{`${messageComboBox}`}</ComboBoxOption>
 
         {option &&
           option.map((item) => (
