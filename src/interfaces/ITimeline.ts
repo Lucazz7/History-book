@@ -1,4 +1,5 @@
 export interface TimelineComponent {
+  pastAndPresent?: string;
   BlocosTimeline: ITimeline[];
 }
 

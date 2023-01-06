@@ -4,6 +4,7 @@ export default {
   title: "Components/Timeline",
   component: Timeline,
   args: {
+    pastAndPresent: "#FF7F2F",
     BlocosTimeline: [
       {
         blockId: "EXEMPLO1",

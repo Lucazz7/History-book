@@ -9,6 +9,8 @@ interface inputFileProps {
   setClick: (click: any) => void;
   iconFile?: string | JSX.Element;
   message: string;
+  colorBorda?: string;
+  textBotao?: string;
 }
 
 export const inputFile: React.FC<inputFileProps> = ({
@@ -16,18 +18,23 @@ export const inputFile: React.FC<inputFileProps> = ({
   setClick,
   click,
   iconFile,
+  colorBorda,
+  textBotao,
 }) => {
   return (
     <FileBox>
       <BoxFile>
-        <SpanStyle>{message}</SpanStyle>
+        <SpanStyle corBorda={`${colorBorda}`}>{message}</SpanStyle>
         <br />
         <FileLabel>
           <FileInput type="file" />
           {iconFile}
         </FileLabel>
         <br />
-        <ButtonDefault buttonName="Enviar" setClick={() => setClick(!click)} />
+        <ButtonDefault
+          buttonName={`${textBotao}`}
+          setClick={() => setClick(!click)}
+        />
       </BoxFile>
     </FileBox>
   );

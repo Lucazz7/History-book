@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const HexagonDivDad = styled.div`
+export const HexagonDivDad = styled.div<{
+  corBlocosRestantes: string;
+  corBlocosAtuais: string;
+}>`
   width: 100%;
   height: 100%;
   display: flex;
