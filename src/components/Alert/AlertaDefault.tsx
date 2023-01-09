@@ -7,17 +7,27 @@ interface AlertaDefaultProps {
   click?: boolean;
   setClick: (click: any) => void;
   text?: string;
+  alertBackground?: string;
+  alertFontColor?: string;
+  alertWidth?: string;
 }
 
 export const AlertaDefault: React.FC<AlertaDefaultProps> = ({
   setClick,
   text,
   click,
+  alertBackground,
+  alertFontColor,
+  alertWidth,
 }) => {
   return (
     <div>
       {click ? (
-        <AlertaStyle>
+        <AlertaStyle
+          widthAlert={`${alertWidth}`}
+          backgroundAlert={`${alertBackground}`}
+          fontColorAlert={`${alertFontColor}`}
+        >
           <div>
             <p>{text}</p>
           </div>

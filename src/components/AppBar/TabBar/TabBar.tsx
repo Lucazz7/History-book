@@ -1,17 +1,53 @@
 import { TabBarStyle } from "./TabBarStyled";
 import { useState } from "react";
-import { BsCircle } from "react-icons/bs";
 import { ButtonRound } from "../../Buttons/ButtonCircle/buttonCircle";
 
-export const TabBarPadrao = () => {
+interface TabBarProps {
+  backgroundTab?: string;
+  borderTab?: string;
+  backgroundBotao?: string;
+  corFontBotao?: string;
+  tabWidth?: string;
+}
+
+export const TabBarPadrao: React.FC<TabBarProps> = ({
+  backgroundTab,
+  borderTab,
+  backgroundBotao,
+  tabWidth,
+}) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <TabBarStyle>
-      <ButtonRound setClick={setOpen} click={open} buttonName={<BsCircle />} />
-      <ButtonRound setClick={setOpen} click={open} buttonName={<BsCircle />} />
-      <ButtonRound setClick={setOpen} click={open} buttonName={<BsCircle />} />
-      <ButtonRound setClick={setOpen} click={open} buttonName={<BsCircle />} />
+    <TabBarStyle
+      widthTab={`${tabWidth}`}
+      backgroundTab={`${backgroundTab}`}
+      borderTab={`${borderTab}`}
+    >
+      <ButtonRound
+        backgroundCor={`${backgroundBotao}`}
+        setClick={setOpen}
+        click={open}
+        buttonName={"Z"}
+      />
+      <ButtonRound
+        backgroundCor={`${backgroundBotao}`}
+        setClick={setOpen}
+        click={open}
+        buttonName={"E"}
+      />
+      <ButtonRound
+        backgroundCor={`${backgroundBotao}`}
+        setClick={setOpen}
+        click={open}
+        buttonName={"U"}
+      />
+      <ButtonRound
+        setClick={setOpen}
+        backgroundCor={`${backgroundBotao}`}
+        click={open}
+        buttonName={"S"}
+      />
     </TabBarStyle>
   );
 };

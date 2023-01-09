@@ -7,6 +7,8 @@ export default {
   component: inputFile,
   args: {
     message: "Selecione um arquivo",
+    colorBorda: "#ff5e00",
+    textBotao: "Enviar",
     iconFile: <BsCloudUploadFill />,
   },
 } as Meta;

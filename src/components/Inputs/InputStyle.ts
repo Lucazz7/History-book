@@ -1,14 +1,19 @@
 import styled from "styled-components";
 
-export const Input = styled.input`
-  width: 100%;
+export const Input = styled.input<{
+  corInput: string;
+  widthInput: string;
+  fontColorInput: string;
+}>`
+  width: ${(props) => props.widthInput};
   height: 45px;
   border: none;
   border-radius: 5px;
+  color: ${(props) => props.fontColorInput};
   font-size: 1.5rem;
   font-weight: lighter;
   margin-bottom: 30px;
-  background: #ecf0f1;
+  background: ${(props) => props.corInput};
   padding: 12px;
 `;
 

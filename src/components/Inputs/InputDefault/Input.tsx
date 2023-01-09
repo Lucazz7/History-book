@@ -1,9 +1,26 @@
 import { Input } from "../InputStyle";
 
-export const input = () => {
+interface inputProps {
+  placeholder?: string;
+  colorInput?: string;
+  widthInput?: string;
+  colorFontInput?: string;
+}
+
+export const input: React.FC<inputProps> = ({
+  placeholder,
+  colorInput,
+  widthInput,
+  colorFontInput,
+}) => {
   return (
     <>
-      <Input placeholder="Digite algo" />
+      <Input
+        fontColorInput={`${colorFontInput}`}
+        placeholder={`${placeholder}`}
+        widthInput={`${widthInput}`}
+        corInput={`${colorInput}`}
+      />
     </>
   );
 };
