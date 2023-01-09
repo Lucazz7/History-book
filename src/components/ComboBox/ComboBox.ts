@@ -12,8 +12,7 @@ export const ComboBox = styled.select<{
   padding: 0px 10px;
 `;
 
-export const ComboBoxOption = styled.option`
-  width: 80%;
+export const ComboBoxOption = styled.option<{ width?: number }>`
   height: 40px;
   border-radius: 5px;
   border: 0px;

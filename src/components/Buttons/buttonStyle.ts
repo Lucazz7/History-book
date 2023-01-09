@@ -1,27 +1,64 @@
+/* eslint-disable spaced-comment */
 import styled from "styled-components";
+import { darkTheme, lightTheme } from "../../styles/theme";
 
-export const Button = styled.button<{
-  backgroundColorButton: string;
-  ColorFontStatic: string;
-  ColorFontHover: string;
-  widthButton: string;
-}>`
-  color: ${(props) => props.ColorFontStatic};
+export interface ContainerButtonProps {
+  bgColor: string;
+  borderColor: string;
+  color: string;
+  hover: {
+    bgColor: string;
+    color: string;
+  };
+  width: 15 | 50 | 100;
+  active: boolean;
+}
+
+export const variantToColor = {
+  primary: {
+    bgColor: lightTheme.primary,
+    borderColor: lightTheme.border,
+    color: lightTheme.text,
+    hover: {
+      bgColor: darkTheme.bg,
+      color: darkTheme.text,
+    },
+  },
+  secondary: {
+    bgColor: darkTheme.bg3,
+    borderColor: darkTheme.border,
+    color: darkTheme.text,
+    hover: {
+      bgColor: lightTheme.bg,
+      color: lightTheme.text,
+    },
+  },
+  outline: {
+    bgColor: darkTheme.bg2,
+    borderColor: darkTheme.text,
+    color: darkTheme.text,
+    hover: {
+      bgColor: lightTheme.text,
+      color: lightTheme.text,
+    },
+  },
+};
+
+export const Button = styled.button<ContainerButtonProps>`
+  color: #fff;
   cursor: pointer;
-  width: ${(props) => props.widthButton};
-  background: ${(props) => props.backgroundColorButton};
+  background: ${(props) => props.bgColor};
   font-size: 1.2rem;
-  height: 45px;
+  width: ${(props) => props.width}%;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: lighter;
+  margin-bottom: 30px;
   padding: 10px;
-
   &:hover {
-    background: #ecf0f1;
-    color: ${(props) => props.ColorFontHover};
-    border: 1px solid ${(props) => props.backgroundColorButton};
+    background: ${(props) => (props.active ? "#ecf0f1" : "grey")};
+    color: ${(props) => (props.active ? "black" : "")};
   }
 `;
 

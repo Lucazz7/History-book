@@ -24,7 +24,7 @@ export const CheckBoxLabel = styled.label`
     transition: 0.2s;
   }
 `;
-export const CheckBox = styled.input<{ backgroundActive: string }>`
+export const CheckBoxInput = styled.input<{ backgroundActive: string }>`
   opacity: 0;
   z-index: 1;
   border-radius: 15px;

@@ -1,4 +1,7 @@
-import { useMemo } from "react";
+/* eslint-disable no-nested-ternary */
+/* eslint-disable import/no-duplicates */
+import { useMemo, useState } from "react";
+import Draggable from "react-draggable";
 import {
   GridGenerator,
   HexGrid,
@@ -7,15 +10,17 @@ import {
   Text,
   Pattern,
 } from "react-hexgrid";
-import { BsFillCloudLightningRainFill } from "react-icons/bs";
+// eslint-disable-next-line import/no-duplicates
 import { AiOutlineEye } from "react-icons/ai";
-import { FaTemperatureHigh } from "react-icons/fa";
+import { BsFillCloudLightningRainFill } from "react-icons/bs";
 import { BsFillSunFill } from "react-icons/bs";
-import IconRain from "../../../images/iconsSvg/rain.svg";
-import Sum from "../../../images/iconsSvg/allIconsTemp/clear-day.svg";
+import { FaTemperatureHigh } from "react-icons/fa";
+
 import Nublado from "../../../images/iconsSvg/allIconsTemp/chuvaNublado.svg";
-import { HexagonDivDad } from "../Hexagon";
-import Draggable from "react-draggable";
+import Sum from "../../../images/iconsSvg/allIconsTemp/clear-day.svg";
+import IconRain from "../../../images/iconsSvg/rain.svg";
+import { Blocks } from "../../Card-Block/Card-Block-Default/card";
+import { HexagonDivDad } from "./Hexagon";
 
 export interface BlockPersonHexa {
   blockId: string;
@@ -37,138 +42,19 @@ export interface BlockPersonHexa {
   s: number;
   className?: string;
 }
-export const Hexag = () => {
-  const exempleBLock = useMemo(() => {
-    const test = [
-      {
-        blockId: "222",
-        name: "Select",
-        abrv: "Slc",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 12,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "222ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 12,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "222ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 0,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "222ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 12,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "222ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 12,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "22ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 22,
-          rain: 12,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "2ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 12,
-          rain: 0,
-          relativeHumidity: 13,
-        },
-      },
-      {
-        blockId: "2ss",
-        name: "Default",
-        abrv: "Def",
-        blockParent: "dsd",
-        leafParent: false,
-        date: "2012",
-        data: {
-          windSpeed: 2,
-          solarIrradiation: 22,
-          temperature: 12,
-          rain: 0,
-          relativeHumidity: 13,
-        },
-      },
-    ];
-    return test;
-  }, []);
+
+interface hexagonProps {
+  blocks: Blocks[];
+}
+
+export const Hexagons: React.FC<hexagonProps> = ({ blocks }: hexagonProps) => {
+  const [enterBlock, setEnterBlock] = useState<string>("");
 
   const hexagonsInicial = GridGenerator.hexagon(1);
   const newBlock = useMemo(() => {
-    //HEXAGONOS BLOCKPARENT 0
+    // HEXAGONOS BLOCKPARENT 0
     const newBlocks: BlockPersonHexa[] = [];
-    exempleBLock.forEach((item, indexBlocks) => {
+    blocks.forEach((item, indexBlocks) => {
       hexagonsInicial.forEach((hexa, indexHex) => {
         if (indexHex === indexBlocks) {
           newBlocks.push({
@@ -185,28 +71,38 @@ export const Hexag = () => {
       });
     });
     return newBlocks;
-  }, [exempleBLock, hexagonsInicial]);
+  }, [blocks, hexagonsInicial]);
 
   return (
     <Draggable>
       <HexagonDivDad>
         <HexGrid height={900} viewBox="-50 -50 100 100">
           <Layout
-            size={{ x: 8.4, y: 8.4 }} //TAMANHO DOS HEXAGONOS
-            flat={true}
+            size={{ x: 8.4, y: 8.4 }} // TAMANHO DOS HEXAGONOS
+            flat
             spacing={1.07}
           >
             {newBlock.map((item) => (
               <>
                 <Hexagon
-                  className={"hexagonNormal"}
+                  className="hexagonNormal"
                   key={item.blockId}
                   q={item.q}
                   r={item.r}
                   s={item.s}
-                  fill={item.icons}
+                  fill={enterBlock === item.blockId ? "" : item.icons}
+                  onMouseEnter={() => setEnterBlock(item.blockId)}
+                  onMouseLeave={() =>
+                    enterBlock.length > 0
+                      ? setEnterBlock("")
+                      : setEnterBlock(item.blockId)
+                  }
                 >
-                  <Text style={{ fill: "black" }}>{item.abrv}</Text>
+                  {item.blockId !== enterBlock ? (
+                    <Text style={{ fill: "black" }}>{item.abrv}</Text>
+                  ) : (
+                    ""
+                  )}
                   <BsFillCloudLightningRainFill
                     className="iconsInfo"
                     x={-4}
@@ -252,19 +148,17 @@ export const Hexag = () => {
                   <Pattern id="pat-2" link={Sum} size={{ x: 8, y: 2.9 }} />
                   <Pattern id="pat-3" link={Nublado} size={{ x: 8, y: 3.1 }} />
                 </Hexagon>
-                <>
-                  <Hexagon q={-1} r={2} s={-1} className="hexaCreatedAndSpand">
-                    <AiOutlineEye
-                      x={-4}
-                      y={-1.9}
-                      className="hexagonViewMoreIcon"
-                    />
-                    <Text x={2} y={0} className="hexagonViewMoreIcon">
-                      {" "}
-                      {exempleBLock.length - 7}
-                    </Text>
-                  </Hexagon>
-                </>
+                <Hexagon q={-1} r={2} s={-1} className="hexaCreatedAndSpand">
+                  <AiOutlineEye
+                    x={-4}
+                    y={-1.9}
+                    className="hexagonViewMoreIcon"
+                  />
+                  <Text x={2} y={0} className="hexagonViewMoreIcon">
+                    {" "}
+                    {blocks.length - 7}
+                  </Text>
+                </Hexagon>
               </>
             ))}
           </Layout>

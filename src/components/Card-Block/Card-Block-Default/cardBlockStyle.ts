@@ -226,6 +226,44 @@ export const Frame = styled.div`
       }
 `
 
+
+export const FrameClearDay = styled.div`
+    position: relative;
+    height: 214px;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(40, 182, 252), rgb(139, 216, 255));
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    .blur {
+      filter: blur(3px);
+    }
+  .grayscale {
+      filter: grayscale(100%);
+    }
+    
+    .saturate {
+      filter: brightness(0);
+    }
+      .saturate-ver2 {
+        filter: brightness(1.1);
+      }
+      .saturate-ver3 {
+        filter: brightness(1.5);
+      }
+      .saturate-ver4 {
+        filter: brightness(1.5);
+      }
+      .saturate-ver5 {
+        filter: brightness(1.5);
+      }
+`
+
 const float = keyframes`
     0% {
         transform: translateX(-540px);
@@ -283,6 +321,49 @@ export const Fog = styled.img`
     width: 400px;
     position: absolute;
     bottom: 90px;
+    animation: ${float} 60s linear infinite reverse;
+    z-index: 2;
+
+    .grayscale {
+        filter: grayscale(100%);
+      }
+      
+      .saturate {
+        filter: brightness(0);
+      }
+      
+      .saturate-ver2 {
+        filter: brightness(0.0);
+      }
+`
+
+export const FogClearDay = styled.img`
+    height: 200px;
+    width: 400px;
+    position: absolute;
+    bottom: 140px;
+    animation: ${float} 70s linear infinite reverse;
+    z-index: 2;
+
+    .grayscale {
+        filter: grayscale(100%);
+      }
+      
+      .saturate {
+        filter: brightness(0);
+      }
+      
+      .saturate-ver2 {
+        filter: brightness(0.0);
+      }
+`
+
+export const FogClearDay2 = styled.img`
+    height: 200px;
+    width: 400px;
+    position: absolute;
+    bottom: 142px;
+
     animation: ${float} 60s linear infinite reverse;
     z-index: 2;
 
@@ -389,6 +470,12 @@ export const InfoBlock = styled.div`
         display: inline-block;
         justify-content: center;
         text-align: center;
+        a {
+          color: white;
+        }
+        a {
+          text-decoration: none;
+        }
     }
 `
 
@@ -414,7 +501,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 25px;
         bottom: 5px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 2.2s linear infinite;
@@ -448,7 +535,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 35px;
         bottom: 5px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.7s linear infinite;
@@ -482,7 +569,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 65px;
         bottom: 5px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.4s linear infinite;
@@ -516,7 +603,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 20px;
         bottom: 5px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.3s linear infinite;
@@ -550,7 +637,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 80px;
         bottom: 5px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.9s linear infinite;
@@ -584,7 +671,7 @@ export const Thing = styled.div`
         position: absolute;
         left: 120px;
         bottom: 15px;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.3s linear infinite;
@@ -620,7 +707,7 @@ export const Thing = styled.div`
         left: 96px;
         bottom: 15px;
         z-index: 0;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 1.4s linear infinite;
@@ -656,7 +743,7 @@ export const Thing = styled.div`
         left: 140px;
         bottom: 15px;
         z-index: 0;
-        circle(8px);
+        @include circle(6px);
         background-color: rgba(231, 231, 231, 0.096);
         border-radius: 50%;
         animation: ${breatheAnimation} 2s linear infinite;
@@ -796,3 +883,22 @@ export const Thing = styled.div`
         }
       }
      `
+
+
+export const Sum = styled.div`
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  box-shadow: 0 0 32px 12px #ddd;
+  border-radius: 50%;
+  top: 10px;
+  left: 71px;
+	background-color: #ffd93c;
+	z-index: 0;
+	box-shadow: 
+		0 0 5px #ffd93c,
+		0 0 15px #ffd93c,
+		0 0 25px #fff,
+		0 0 40px #ffd93c;
+
+`
