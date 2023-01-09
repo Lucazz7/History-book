@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Meta } from "@storybook/react";
 import { inputFile } from "./InputFile";
 

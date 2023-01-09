@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { Meta } from "@storybook/react";
 import { Hexagons } from "./hexagon";
 
@@ -126,8 +127,8 @@ export default {
           relativeHumidity: 13,
         },
       },
-    ]
-  }
+    ],
+  },
 } as Meta;
 
 export const HexagonDefault = {};

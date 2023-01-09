@@ -1,5 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { Meta } from "@storybook/react";
-import App from "../../../App";
 import { input } from "./Input";
 
 export default {
