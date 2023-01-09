@@ -31,6 +31,13 @@
     "import/no-unresolved": "error",
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.stories.*", "**/.storybook/**/*.*"],
+        "peerDependencies": true
+      }
+    ],
     // "@typescript-eslint/naming-convention": [
     //     "error",
     //     {
@@ -45,7 +52,7 @@
     //     }
     // ],
     "class-methods-use-this": "off",
-    "import/prefer-default-export": "off",
+    // "import/prefer-default-export": "off",
     "no-shadow": "off",
     "no-console": "off",
     "no-useless-constructor": "off",
@@ -59,23 +66,23 @@
         "tsx": "never"
       }
     ],
-    "import-helpers/order-imports": [
-      "warn",
-      {
-        "newlinesBetween": "always",
-        "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
-        "alphabetize": {
-          "order": "asc",
-          "ignoreCase": true
-        }
-      }
-    ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": ["**/*.spec.js"]
-      }
-    ],
+    // "import-helpers/order-imports": [
+    //   "warn",
+    //   {
+    //     "newlinesBetween": "always",
+    //     "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
+    //     "alphabetize": {
+    //       "order": "asc",
+    //       "ignoreCase": true
+    //     }
+    //   }
+    // ],
+    // "import/no-extraneous-dependencies": [
+    //   "error",
+    //   {
+    //     "devDependencies": ["**/*.spec.js"]
+    //   }
+    // ],
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [
       1,
