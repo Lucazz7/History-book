@@ -69,10 +69,14 @@ export const ButtonCircle = styled.button<{
 }>`
   background: ${(props) => props.backgroundCor};
   padding: 20px;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
   text-align: center;
+  align-items: center;
   border: none;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
   font-size: 16px;
   border-radius: 50%;
   color: ${(props) => props.corFontBotao};
