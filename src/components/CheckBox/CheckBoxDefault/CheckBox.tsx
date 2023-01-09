@@ -1,24 +1,33 @@
-import { CheckBox, CheckBoxLabel, CheckBoxWrapper } from "../CheckBox";
+import {
+  CheckBoxInput,
+  CheckBoxLabel,
+  CheckBoxWrapper,
+} from "../CheckBoxStyle";
 
-interface checkBoxProps {
+interface CheckBoxProps {
   click?: boolean;
   setClick: (click: any) => void;
   backgroundChecked?: string;
+  onChange: (value: boolean) => void;
+  changeBoolean: boolean;
 }
 
-export const checkBox: React.FC<checkBoxProps> = ({
+export const CheckBox: React.FC<CheckBoxProps> = ({
   click,
   setClick,
   backgroundChecked,
-}: checkBoxProps) => {
+  onChange,
+  changeBoolean,
+}: CheckBoxProps) => {
   return (
     <div>
       <CheckBoxWrapper>
-        <CheckBox
+        <CheckBoxInput
           backgroundActive={`${backgroundChecked}`}
           id="checkbox"
           type="checkbox"
           onClick={() => setClick(!click)}
+          onChange={() => onChange(!changeBoolean)}
         />
         <CheckBoxLabel htmlFor="checkbox" />
       </CheckBoxWrapper>

@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { ComboBox, ComboBoxOption } from "../ComboBox";
 
 interface ComboBoxProps {

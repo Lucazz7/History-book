@@ -1,9 +1,10 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Meta } from "@storybook/react";
 import { inputFile } from "./InputFile";
 import { BsCloudUploadFill } from "react-icons/bs";
 
 export default {
-  title: "Components/Inputs",
+  title: "Components/Inputs/UploadFile",
   component: inputFile,
   args: {
     message: "Selecione um arquivo",
@@ -13,4 +14,4 @@ export default {
   },
 } as Meta;
 
-export const InputFile = {};
+export const InputFileUpload = {};

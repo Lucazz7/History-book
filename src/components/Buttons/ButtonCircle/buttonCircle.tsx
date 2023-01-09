@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { ButtonCircle } from "../buttonStyle";
 
 interface bottonRoundProps {

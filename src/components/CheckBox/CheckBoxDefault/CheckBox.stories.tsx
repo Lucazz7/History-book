@@ -1,9 +1,9 @@
 import { Meta } from "@storybook/react";
-import { checkBox } from "./CheckBox";
+import { CheckBox } from "./CheckBox";
 
 export default {
   title: "Components/CheckBoxS",
-  component: checkBox,
+  component: CheckBox,
   args: {
     backgroundChecked: "#ff5e00",
   },

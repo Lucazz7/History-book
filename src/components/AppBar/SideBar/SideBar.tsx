@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import {
   SideBarComponents,
   SideBarItem,
   SideBarLogo,
   SideBarStyle,
 } from "./SideBarStyle";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { ButtonDefault } from "../../Buttons/ButtonDefault/button";
 
 interface SideBarComponent {
@@ -30,6 +31,7 @@ export const SideBarPadrao: React.FC<SideBarComponent> = ({
   return (
     <>
       <ButtonDefault
+        variation="primary"
         setClick={setClick}
         click={click}
         buttonName={<AiOutlineArrowRight />}
@@ -51,6 +53,7 @@ export const SideBarPadrao: React.FC<SideBarComponent> = ({
                 </SideBarItem>
               ))}
             <ButtonDefault
+              variation="primary"
               setClick={setClick}
               click={click}
               buttonName={<AiOutlineArrowLeft />}

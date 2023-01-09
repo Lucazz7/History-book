@@ -9,7 +9,7 @@ export default {
     click: true,
     alertBackground: "rgb(75,181,67)",
     alertFontColor: "black",
-    alertWidth: "100%",
+    alertWidth: "20%",
   },
 } as Meta;
 

@@ -1,31 +1,35 @@
-import { Button } from "../buttonStyle";
+/* eslint-disable react/require-default-props */
+import { Button, variantToColor } from "../buttonStyle";
 
-interface bottonProps {
+export interface bottomProps {
   buttonName: string | JSX.Element;
   click?: boolean;
   setClick: (click: any) => void;
-  backgroundColorButton?: string;
-  ColorFontStatic?: string;
-  ColorFontHover?: string;
-  width?: string;
+  widthButton?: 15 | 50 | 100;
+  disableButton?: boolean;
+  variation: "primary" | "secondary" | "outline";
 }
 
-export const ButtonDefault: React.FC<bottonProps> = ({
+export const ButtonDefault: React.FC<bottomProps> = ({
   buttonName,
   click,
   setClick,
-  backgroundColorButton,
-  ColorFontHover,
-  ColorFontStatic,
-  width,
-}: bottonProps) => {
+  widthButton,
+  disableButton,
+  variation,
+}: bottomProps) => {
+  const { bgColor, borderColor, color, hover } = variantToColor[variation];
+
   return (
     <>
       <Button
-        widthButton={`${width}`}
-        ColorFontHover={`${ColorFontHover}`}
-        ColorFontStatic={`${ColorFontStatic}`}
-        backgroundColorButton={`${backgroundColorButton}`}
+        disabled={disableButton}
+        width={widthButton}
+        active={disableButton}
+        bgColor={bgColor}
+        borderColor={borderColor}
+        color={color}
+        hover={hover}
         onClick={() => setClick(!click)}
       >
         {buttonName}

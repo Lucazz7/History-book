@@ -1,7 +1,10 @@
+/* eslint-disable import/order */
+/* eslint-disable react/jsx-curly-brace-presence */
+/* eslint-disable react/prop-types */
 import { useState } from "react";
+import { AlertaStyle } from "./AlertaStyle";
 import { ButtonDefault } from "../Buttons/ButtonDefault/button";
 import { MdOutlineCancel } from "react-icons/md";
-import { AlertaStyle } from "./AlertaStyle";
 
 interface AlertaDefaultProps {
   click?: boolean;
@@ -32,6 +35,7 @@ export const AlertaDefault: React.FC<AlertaDefaultProps> = ({
             <p>{text}</p>
           </div>
           <ButtonDefault
+            variation="primary"
             buttonName={<MdOutlineCancel />}
             click={click}
             setClick={setClick}
@@ -39,6 +43,7 @@ export const AlertaDefault: React.FC<AlertaDefaultProps> = ({
         </AlertaStyle>
       ) : (
         <ButtonDefault
+          variation="primary"
           buttonName={"Mostre o Alerta"}
           click={click}
           setClick={setClick}

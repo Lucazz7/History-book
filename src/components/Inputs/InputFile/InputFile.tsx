@@ -1,39 +1,32 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable import/order */
+/* eslint-disable react/jsx-curly-brace-presence */
+/* eslint-disable import/prefer-default-export */
 import { BoxFile, FileBox, FileInput, FileLabel } from "../InputStyle";
 import { BsCloudUploadFill } from "react-icons/bs";
 import { SpanStyle } from "../SpanStyle";
 import { ButtonDefault } from "../../Buttons/ButtonDefault/button";
 import { useState } from "react";
 
-interface inputFileProps {
-  click?: boolean;
-  setClick: (click: any) => void;
-  iconFile?: string | JSX.Element;
-  message: string;
-  colorBorda?: string;
-  textBotao?: string;
-}
+export const inputFile = () => {
+  const [upload, setUpload] = useState(false);
 
-export const inputFile: React.FC<inputFileProps> = ({
-  message,
-  setClick,
-  click,
-  iconFile,
-  colorBorda,
-  textBotao,
-}) => {
   return (
     <FileBox>
       <BoxFile>
-        <SpanStyle corBorda={`${colorBorda}`}>{message}</SpanStyle>
+        <SpanStyle>Carregar Arquivo</SpanStyle>
         <br />
         <FileLabel>
           <FileInput type="file" />
-          {iconFile}
+          <BsCloudUploadFill />
         </FileLabel>
         <br />
         <ButtonDefault
-          buttonName={`${textBotao}`}
-          setClick={() => setClick(!click)}
+          widthButton={50}
+          disableButton={false}
+          variation={"primary"}
+          buttonName="Enviar"
+          setClick={() => setUpload(!upload)}
         />
       </BoxFile>
     </FileBox>
