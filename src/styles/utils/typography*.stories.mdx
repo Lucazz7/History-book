@@ -1,0 +1,170 @@
+<!-- Typography.stories.mdx -->
+
+import { Meta, Typeset } from "@storybook/addon-docs/blocks";
+
+<Meta title="Typography" />
+
+export const primaryFont = "Roboto Mono";
+
+export const typography = {
+  type: {
+    primary: '"Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
+  },
+  weight: {
+    regular: "400",
+    bold: "700",
+    extrabold: "800",
+    black: "900",
+  },
+  size: {
+    s1: 12,
+    s2: 14,
+    s3: 16,
+    m1: 20,
+    m2: 24,
+    m3: 28,
+    l1: 32,
+    l2: 40,
+    l3: 48,
+  },
+};
+
+export const typographys = {
+  type: {
+    primary: "Montserrat",
+    secondary: "Montserrat, sans-serif",
+  },
+  weight: {
+    regular: "400",
+    medium: "500",
+    semibold: "600",
+    bold: "700",
+  },
+  size: {
+    mini: 10,
+    pp: 12,
+    p: 14,
+    base: 16,
+    g: 22,
+    xg: 32,
+    xl2: 36,
+    xl3: 48,
+    xl4: 64,
+    xl5: 72,
+    xl6: 96,
+    xl7: 128,
+  },
+  lineHeight: {
+    sm: "8px",
+    md: "16px",
+    lg: "24px",
+    xl: "32px",
+    xl2: "40px",
+    xl3: "48px",
+    xl4: "56px",
+  },
+  scale: {
+    header1: "1.8rem",
+    header2: "1.6rem",
+    header3: "1.4rem",
+    header4: "1.2rem",
+    header5: "1.1rem",
+    paragraph: "1rem",
+    helperText: "0.8rem",
+    copyrightText: "0.7rem",
+  },
+};
+const fontHeadline0 = {
+  type: typographys.type.primary,
+  size: typographys.size.xl2,
+  weight: typographys.weight.bold,
+  lineHeight: typographys.lineHeight.xl4,
+};
+const fontHeadline01 = {
+  type: typographys.type.primary,
+  size: typographys.size.fontXG,
+  weight: typographys.weight.semibold,
+  lineHeight: typographys.lineHeight.xl3,
+};
+const fontHeadline02 = {
+  type: typographys.type.primary,
+  size: typographys.size.fontG,
+  weight: typographys.weight.bold,
+  lineHeight: typographys.lineHeight.xl,
+};
+const fontHeadline03 = {
+  type: typographys.type.primary,
+  size: typographys.size.fontG,
+  weight: typographys.weight.regular,
+  lineHeight: typographys.lineHeight.xl,
+};
+const fontHeadline04 = {
+  type: typographys.type.primary,
+  size: typographys.size.fontBase,
+  weight: typographys.weight.bold,
+  lineHeight: typographys.lineHeight.lg,
+};
+const fontHeadline05 = {
+  type: typographys.type.primary,
+  size: typographys.size.fontP,
+  weight: typographys.weight.bold,
+  lineHeight: typographys.lineHeight.lg,
+};
+
+export const SampleText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+
+# Typography
+
+**Font:** Montserrat
+
+**Weights:** 400(regular), 500(medium), 600(semibold), 700(bold).
+
+<Typeset
+  fontSizes={[
+    Number(typographys.size.mini),
+    Number(typographys.size.pp),
+    Number(typographys.size.p),
+    Number(typographys.size.base),
+    Number(typographys.size.g),
+    Number(typographys.size.xg),
+    Number(typographys.size.xl2),
+    Number(typographys.size.xl3),
+    Number(typographys.size.xl4),
+    Number(typographys.size.xl5),
+    Number(typographys.size.xl6),
+    Number(typographys.size.xl7),
+  ]}
+  fontWeight={typographys.weight.regular}
+  sampleText={SampleText}
+  fontFamily={typographys.type.primary}
+  scale={typographys.scale.header2}
+  lineHeight={typographys.lineHeight.md}
+/>
+
+# Font Headline 0
+
+<Typeset
+  fontSizes={[Number(typographys.size.xl2)]}
+  fontFamily={typographys.type.primary}
+  fontWeight={typographys.weight.bold}
+  lineHeight={typographys.lineHeight.xl4}
+  sampleText={"Texto de exemplo"}
+/>
+
+## Heading 2
+
+<Typeset
+  fontSizes={[
+    Number(typographys.size.xl2),
+    Number(typographys.size.xl3),
+    Number(typographys.size.xl4),
+    Number(typographys.size.xl5),
+    Number(typographys.size.xl6),
+  ]}
+  fontWeight={typographys.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typographys.type.primary}
+  scale={typographys.scale.header2}
+  lineHeight={typographys.lineHeight.xl2}
+/>
