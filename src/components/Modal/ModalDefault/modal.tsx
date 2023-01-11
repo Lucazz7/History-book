@@ -1,10 +1,3 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/jsx-curly-brace-presence */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable no-constant-condition */
-/* eslint-disable react/jsx-boolean-value */
-/* eslint-disable dot-notation */
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import Modal from "react-bootstrap/esm/Modal";

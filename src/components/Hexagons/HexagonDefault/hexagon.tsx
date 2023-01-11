@@ -1,5 +1,3 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable import/no-duplicates */
 import { useMemo, useState } from "react";
 import Draggable from "react-draggable";
 import {
@@ -10,12 +8,9 @@ import {
   Text,
   Pattern,
 } from "react-hexgrid";
-// eslint-disable-next-line import/no-duplicates
 import { AiOutlineEye } from "react-icons/ai";
-import { BsFillCloudLightningRainFill } from "react-icons/bs";
-import { BsFillSunFill } from "react-icons/bs";
+import { BsFillCloudLightningRainFill, BsFillSunFill } from "react-icons/bs";
 import { FaTemperatureHigh } from "react-icons/fa";
-
 import Nublado from "../../../images/iconsSvg/allIconsTemp/chuvaNublado.svg";
 import Sum from "../../../images/iconsSvg/allIconsTemp/clear-day.svg";
 import IconRain from "../../../images/iconsSvg/rain.svg";
@@ -75,7 +70,7 @@ export const Hexagons: React.FC<hexagonProps> = ({ blocks }: hexagonProps) => {
 
   return (
     <Draggable>
-      <HexagonDivDad>
+      <HexagonDivDad corBlocosRestantes={"#000"} corBlocosAtuais={"#124"}>
         <HexGrid height={900} viewBox="-50 -50 100 100">
           <Layout
             size={{ x: 8.4, y: 8.4 }} // TAMANHO DOS HEXAGONOS

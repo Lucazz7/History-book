@@ -1,7 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable import/order */
-/* eslint-disable react/jsx-curly-brace-presence */
-/* eslint-disable import/prefer-default-export */
 import { BoxFile, FileBox, FileInput, FileLabel } from "../InputStyle";
 import { BsCloudUploadFill } from "react-icons/bs";
 import { SpanStyle } from "../SpanStyle";

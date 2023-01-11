@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { Meta, Story } from "@storybook/react";
 import { ModalProps, OpenModal } from "./modal";
 

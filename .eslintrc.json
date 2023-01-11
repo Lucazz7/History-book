@@ -38,22 +38,22 @@
         "peerDependencies": true
       }
     ],
-    // "@typescript-eslint/naming-convention": [
-    //     "error",
-    //     {
-    //         "selector": "interface",
-    //         "format": [
-    //             "PascalCase"
-    //         ],
-    //         "custom": {
-    //             "regex": "^I[A-Z]",
-    //             "match": true
-    //         }
-    //     }
-    // ],
     "class-methods-use-this": "off",
     "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
+    "react/jsx-boolean-value": "off",
+    "dot-notation": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "react/self-closing-comp": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/order": "off",
+    "no-unused-expressions": "off",
+    "no-nested-ternary": "off",
+    "react/prop-types": "off",
+    "spaced-comment": "off",
     "no-shadow": "off",
+    "react/jsx-curly-brace-presence": "off",
     "no-console": "off",
     "no-useless-constructor": "off",
     "no-empty-function": "off",
@@ -66,23 +66,6 @@
         "tsx": "never"
       }
     ],
-    // "import-helpers/order-imports": [
-    //   "warn",
-    //   {
-    //     "newlinesBetween": "always",
-    //     "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
-    //     "alphabetize": {
-    //       "order": "asc",
-    //       "ignoreCase": true
-    //     }
-    //   }
-    // ],
-    // "import/no-extraneous-dependencies": [
-    //   "error",
-    //   {
-    //     "devDependencies": ["**/*.spec.js"]
-    //   }
-    // ],
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [
       1,

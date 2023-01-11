@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import {
   TimelineCenter,
   TimelineDad,
@@ -11,12 +11,7 @@ import {
   TimelineLeft,
   TimelineRight,
 } from "./TimelineStyle";
-import {
-  ITimeline,
-  TimelineComponent,
-  TimelineDado,
-} from "../../interfaces/ITimeline";
-import axios from "axios";
+import { TimelineComponent, TimelineDado } from "../../interfaces/ITimeline";
 import { BsCloudRainFill } from "react-icons/bs";
 import { TbSnowflake } from "react-icons/tb";
 import { format } from "date-fns";
@@ -34,7 +29,7 @@ export const Timeline: React.FC<TimelineComponent> = ({
     });
 
     return arrTime.reverse();
-  }, []);
+  }, [BlocosTimeline]);
   return (
     <TimelineDad>
       <TimelineDaughter>
