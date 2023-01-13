@@ -1138,6 +1138,11 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
+"@balkangraph/orgchart.js@^8.9.22":
+  version "8.9.22"
+  resolved "https://registry.yarnpkg.com/@balkangraph/orgchart.js/-/orgchart.js-8.9.22.tgz#0e753c84ad3de6ea2f9690a35ee9779957bdf2d0"
+  integrity sha512-x7qWudquusrRjjFlT/Op8r7VZmFTAQrRWX5+lu8P4GyVxnXy+k/1VHN/iiunZG2vKTy4ufxVpnO9Ou6NfbX6GA==
+
 "@base2/pretty-print-object@1.0.1":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@base2/pretty-print-object/-/pretty-print-object-1.0.1.tgz"
@@ -7913,6 +7918,11 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
   integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
 
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==
+
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
@@ -9418,6 +9428,11 @@ raw-loader@^4.0.2:
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
+
+react-balkangraph-orgchart@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-balkangraph-orgchart/-/react-balkangraph-orgchart-1.0.1.tgz#4f63f731bcbc116c37f48e8c4ac7e20e601505a3"
+  integrity sha512-dwWPQuxcKmGOCzTjh87VY41ewmlcuZ2IjS9An0nyYvnHv7YWnIHXnDbc2wRfQdOl7xPx9ig5MDKrL+Bj4IxIFQ==
 
 react-bootstrap@^2.7.0:
   version "2.7.0"
